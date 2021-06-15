@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Kary's journey</title>
+    <link rel="stylesheet" type="text/css" href="style_01home.css">
+</head>
+
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Kary's.</a>
+            <div class="toggle" onclick="navToggle();"><span></span></div>
+        </header>
+
+        <!-- ---------- Glass Morphism Effect ---------- -->
+        <div class="glass">
+            <div class="contentBx">
+                <ul class="quickLink">
+                    <li style="--i:1"><a href="../06PrivacyPolicy/06PrivacyPolicy.html" target="_blank"
+                            rel="noreferrer noopener">Privacy Policy</a></li>
+                    <li style="--i:2"><a href="../05Contact/ContactFome.html" target="_blank"
+                            rel="noreferrer noopener">Contact</a></li>
+                </ul>
+
+                <div class="copyrightText">©2021 Kary LIN</div>
+            </div>
+        </div>
+
+        <!-- ---------- Main Content ---------- -->
+        <div class="content">
+            <h2>Welcome to...<br><span>explore Kary's journey.</span></h2>
+        </div>
+
+        <video src="Pexels Videos 4703 by eberhard grossgasteiger.mp4" autoplay muted loop></video>
+
+        <ul class="sci">
+            <li style="--i:1"><a href="https://twitter.com/lin_kary" target="_blank" rel="noreferrer noopener"><i
+                        class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li style="--i:2"><a href="https://www.linkedin.com/in/kary-lin-5aa55566/" target="_blank"
+                    rel="noreferrer noopener"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        </ul>
+
+        <!-- ---------- Navigation ---------- -->
+        <nav>
+            <ul>
+                <li style="--i:1"><a href="#">About Me</a></li>
+                <li style="--i:2"><a href="../03Skill/03Skill.html" target="_blank" rel="noreferrer noopener">Skill</a>
+                </li>
+                <li style="--i:3"><a href="../04Portfolio/04Portfolio.html" target="_blank"
+                        rel="noreferrer noopener">Portfolio</a></li>
+                <li style="--i:4"><a href="#">A day in the life of</a></li>
+                <li style="--i:5"><a href="../05Contact/ContactFome.html" target="_blank"
+                        rel="noreferrer noopener">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <script type="text/javascript">
+        function navToggle() {
+            const toggleNav = document.querySelector('.toggle');
+            const section = document.querySelector('section');
+            toggleNav.classList.toggle('active');
+            section.classList.toggle('active');
+        }
+    </script>
+    </div>
+</body>
+
+</html>
