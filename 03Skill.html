@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="style_03Skill.css">
+</head>
+
+<body>
+    <section>
+        <!---------- Home ---------->
+        <a href="Index.html" class="kary">Kary's</a>
+
+        <!---------- Skills ---------->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <div class="content">
+                            <p>Project design, planning, execute and budget preparation; Technical support</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="icon/civil.png">
+                                </div>
+                                <h3>Civil Engineering Skills</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <div class="content">
+                            <p>Standardized testing; Test planning, design, execution, analysis; Instrument development
+                            </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="icon/laboratory.png">
+                                </div>
+                                <h3>Laboratory Skills</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <div class="content">
+                            <p>Project planning, design, excution, management; Product design, research, development,
+                                analysis; Specification and laboratory cunsultation</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="icon/industry.png">
+                                </div>
+                                <h3>Industry knowledge Skills</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <div class="content">
+                            <p><img src="icon/autocad.png"><img src="icon/word.png"><img src="icon/excel.png"><img
+                                    src="icon/powerpoint.png"></p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="icon/tool.png">
+                                </div>
+                                <h3>Tools Skills</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <div class="content">
+                            <p><img src="icon/html5.png"><img src="icon/css3.png"><img src="icon/js.png"><img
+                                    src="icon/bootstrap.png"></p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="icon/it.png">
+                                </div>
+                                <h3>IT Skills</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------- sample ---------->
+        <a href="A Cup of Tea.html" class="sample">Skill sample</a>
+
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>

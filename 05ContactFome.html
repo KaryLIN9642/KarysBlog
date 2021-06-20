@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Contact Kary</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poiret One', cursive;
+        }
+
+        input {
+            font-family: 'Poiret One', cursive;
+        }
+
+        input,
+        button,
+        textarea {
+            outline: none;
+        }
+
+        /* ---------- Home ---------- */
+        .contact .logo {
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            font-size: 2.5em;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+            text-decoration: none;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+            transition: 0.5s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact .logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(1px 8px 30px #b1afaf);
+        }
+
+        /* ---------- Animation ---------- */
+        .contact {
+            min-height: 100vh;
+            width: 100%;
+            background-image: url(bg/bg-05Contact.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact .animate {
+            display: inline-block;
+            width: calc(0.63em * var(--i));
+            height: calc(0.63em * var(--i));
+            border-radius: calc(0.32em * var(--i));
+            border: 20x solid #fff5;
+            position: absolute;
+            top: calc(6% * var(--i));
+            left: calc(10% * var(--i));
+            box-shadow: 0 2px 6px #0002, 0 4px 16px #0004;
+
+            animation-name: move;
+            animation-iteration-count: infinite;
+            animation-delay: calc(0.3s * var(--i));
+            animation-duration: calc(5s * var(--i));
+            animation-fill-mode: both;
+        }
+
+        .contact .animate:nth-child(1) {
+            background-color: #968586;
+        }
+
+        .contact .animate:nth-child(2) {
+            background-color: #7aa4d5;
+        }
+
+        .contact .animate:nth-child(3) {
+            background-color: #c78c49;
+        }
+
+        .contact .animate:nth-child(4) {
+            background-color: #7c91a8;
+        }
+
+        .contact .animate:nth-child(5) {
+            background-color: #112035;
+        }
+
+        /* ---------- Form ---------- */
+        .contact .contactForm {
+            display: block;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px 25px;
+            background-image: linear-gradient(135deg, #fff3, #fff1);
+            /*線性漸層語法：background: linear-gradient(方向,顏色1,顏色2, ......), 
+                線性漸層的方向可以是由上而下漸層、由下而上漸層、由左而右或由右而左漸層，甚至可以設定漸層角度
+                徑向漸層語法：background: radial-gradient(ellipse 或 circle,顏色1,顏色2, ......);
+                徑向漸層的部份則可以使用預設的橢圓形（ellipse）或自定為圓形（circle）漸層效果*/
+            backdrop-filter: blur(10px);
+            border-radius: 0.75em;
+            border: 2px outset #fff5;
+            position: relative;
+            box-shadow: 0 2px 6px #0002 0 5px 16px #0005;
+        }
+
+        .contactForm h1 {
+            font-size: 1.75em;
+            color: #7aa4d5;
+        }
+
+        .contact .contactForm .group {
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .contact .contactForm .group input,
+        textarea {
+            background-color: #0002;
+            border-radius: 0.35em;
+            padding: 5px 25px 5px 10px;
+            display: block;
+            width: 100%;
+            box-shadow: -1px 1px 2px #0002 inset;
+            color: #fff;
+            font-size: 1.5em;
+            border: 1px outset #fff5;
+            transition: border-radius 0.3s;
+        }
+
+        .contact .contactForm .group label {
+            position: absolute;
+            pointer-events: none;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: #8e9eb2;
+            transition-property: top, left, color, font-size;
+            transition: 0.3s;
+        }
+
+        .contact .contactForm .group input:valid+label,
+        .contact .contactForm .group input:focus+label,
+        .contact .contactForm .group textarea:focus+label {
+            top: -14px;
+            left: 0;
+            color: #fff;
+            font-size: 0.8em;
+        }
+
+        .contact .contactForm .group .icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fffe;
+            text-shadow: 0 0 1px #0007;
+        }
+
+        .contact .contactForm button {
+            border: 1px outset #ffffff78;
+            display: inline-block;
+            background: linear-gradient(45deg, #ffffff05, #ffffff61);
+            padding: 8px 20px;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1em;
+            box-shadow: 0 0 0 4px #fff2;
+            margin: 20px 10px;
+            cursor: pointer;
+            transition-property: transform, background;
+            transition: 0.3s ease-in-out;
+        }
+
+        .contact .contactForm button:hover {
+            background: linear-gradient(-45deg, #ffffff05, #ffffff61);
+        }
+
+        .contact .contactForm button:active {
+            transform: scale(0.95);
+        }
+
+        .contact .contactForm .slogan {
+            text-align: right;
+        }
+
+        .contact .contactForm .slogan p {
+            display: inline-block;
+            padding: 0 10px;
+            text-decoration: none;
+            background: #0001;
+            color: #7aa4d5;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 1px #0002;
+            transition: color 0.3s;
+            font-family: 'Sacramento', cursive;
+        }
+
+        @keyframes move {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            10%,
+            50% {
+                transform: translate(200%, 400%);
+            }
+
+            25%,
+            75% {
+                transform: translate(300%, 500%);
+            }
+
+            20%,
+            40%,
+            80% {
+                transform: translate(500%, 300%);
+            }
+
+            30%,
+            60%,
+            90% {
+                transform: translate(400%, 200%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact">
+        <!---------- Animation ---------->
+        <span class="animate" style="--i:3;"></span>
+        <span class="animate" style="--i:5;"></span>
+        <span class="animate" style="--i:2;"></span>
+        <span class="animate" style="--i:4;"></span>
+        <span class="animate" style="--i:6;"></span>
+
+        <!---------- Home ---------->
+        <a href="Index.html" class="logo">Kary's</a>
+
+        <!---------- Form ---------->
+        <form method="post" action="mailto:karycklin@gmail.com?SUBJECT=Contact_Form" enctype="text/plain"
+            class="contactForm">
+            <h1>Contact Form</h1>
+
+            <div class="group">
+                <input type="text" name="" required>
+                <label>Your name</label>
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+            </div>
+
+            <div class="group">
+                <input type="email" required>
+                <label>Your email</label>
+                <span class="icon">
+                    <i class="fa fa-envelope"></i>
+                </span>
+            </div>
+
+            <div class="group">
+                <textarea></textarea>
+                <label>Your message</label>
+                <span class="icon">
+                    <i class="fa fa-commenting"></i>
+                </span>
+            </div>
+
+            <button type="submit">Sent</button>
+
+            <div class=" slogan">
+                <p>Wish you have a nice day !</p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>

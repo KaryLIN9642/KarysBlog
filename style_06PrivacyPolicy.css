@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*
+{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Abel', sans-serif,"微軟正黑體";
+}
+
+h2{
+  color: #fff;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+}
+
+p{
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-align: justify;
+  text-indent: 2em;
+}
+span{
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+
+/*------------ header ------------*/
+header{
+  background: #12222d;
+  padding: 1em;
+}
+
+header h1{
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;  
+  font-size: 3em;
+  color: aliceblue;
+} 
+
+header nav {
+  margin: 0 70px 0 0;
+  font-size: 1.2em;
+}
+header nav ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul li{
+  list-style: none;  
+}
+header nav ul li a{
+  color: #999;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+header nav ul li a:hover{
+  color: #ffeb3b;
+  transform: scale(1.2);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+
+/*------------ why set up ------------*/
+section .content{
+  background: #1c374a;
+  padding: 3em 6em;
+}
+section .content a{
+  color: #3475ca;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+section .content a:hover{
+  color: #ffeb3b;
+  transform: scale(1.2);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+/*------------ Attribution ------------*/
+section .attribution{
+  background: #1c374a;
+  padding: 3em 6em;
+  text-align: center;
+  color: aliceblue;
+}
+section .attribution a{
+  color: #999;
+  text-decoration: none;
+  line-height: 1.5;  
+  letter-spacing: 0.1em;
+}
+section .attribution a:hover{
+  color: #3475ca;
+  transform: scale(1.5);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+/*------------ Comments ------------*/
+section .comment{
+  background: #1c374a;
+  padding: 3em 6em;
+  text-align: center;
+}
+section .comment a{
+  color: #999;
+  text-decoration: none;
+  line-height: 1.5;  
+  letter-spacing: 0.1em;
+}
+section .comment a:hover{
+  color: #3475ca;
+  transform: scale(1.5);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+/*------------ Reference ------------*/
+section .reference{
+  background: #1c374a;
+  padding: 3em 6em;
+  color: aliceblue;
+}
+
+section .reference .item{
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0.5em 0 0.1em;
+}
+
+section .reference ul{
+  list-style-position: outside;
+  text-align: flex-start;
+  padding-left: 3em;
+  line-height: 1.8;
+}
+
+section .reference ul li a{
+  color: #999;
+  text-decoration: none;
+  line-height: 1.5;  
+  letter-spacing: 0.1em;
+}
+section .reference ul li a:hover{
+  color: #3475ca;
+  transform: scale(1.5);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+/*------------ footer ------------*/
+footer{
+  background: #12222d;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .kary{  
+  left: 100px;
+  font-size: 2.5em;
+  color: #3475ca;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+footer .kary:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li{
+  list-style: none;
+}
+
+footer ul li a{
+  color: #999;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+footer ul li a:hover{
+  color: #fff;
+  transform: scale(1.2);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+/* ---------- For device ---------- */
+@media (max-width:500px){
+  section{
+    flex-direction: column;
+  }
+    section .content,
+  section .attribution,
+  section .privacy, 
+  section .comment,
+  section .reference{
+    padding: 20px;
+  }
+  header h1{
+    font-size: 2.5em;
+  }
+  header nav {
+  margin: 0 20px 0 0;
+  font-size: 0.9em;
+}
+  footer{
+    padding: 20px 30px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  footer ul{
+    margin-bottom: 20px;
+  }
+  footer ul li a{
+    margin: 0 5px;
+    font-size: 0.9em;
+  }
+}
