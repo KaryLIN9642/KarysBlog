@@ -109,10 +109,19 @@ section .kary:hover{
 }
 
 /* ---------- sample ---------- */
-section .sample{  
+section ul {
   position: absolute;
   bottom: 40px;
   right: 100px;
+}
+
+section ul li{
+ list-style-type: none;
+ display: inline;
+ margin: 0 10px;
+}
+
+section .sample{  
   font-size: 2em;
   color: #E4010B;
   font-weight: 500;
