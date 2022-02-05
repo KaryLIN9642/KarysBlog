@@ -57,12 +57,19 @@
   background-attachment: fixed;  
   background-position: center;
 }
-
 .container .contact:nth-child(2){
+  background: url(bg/bg-08-01.jpg);
+  background-size: cover;
+  background-attachment: fixed;  
+  background-position: center;
+  opacity: 0.9;
+}
+.container .contact:nth-child(3){
   background: url(bg/bg-08-02.jpg);
   background-size: cover;
   background-attachment: fixed;  
   background-position: center;
+  opacity: 0.9;
 }
 
 .container .contact .posts, .post-content{  
@@ -107,6 +114,7 @@ h2{
 p{
   font-family: 'Poppins', sans-serif;
   background: #fff;
+  opacity: 0.6;
   color: #111;
   font-size: 1.1em;
   font-weight: 300;
@@ -114,14 +122,25 @@ p{
   text-indent: 2em;
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 0.2em;
-  opacity: 0.6;
+  margin-top: 0.2em;  
 }
 
 span{
   color:#023459;
   font-weight: 600;
 }
+
+a{
+  text-decoration: none;
+  color:#95070c;
+  font-weight: 700;
+}
+a:hover{
+  color: #191970;
+  text-transform: uppercase;
+  filter: drop-shadow(1px 8px 30px #95070c);
+}
+
 
 /* ---------- For device less then 1250px---------- */
 @media (max-width:1250px){
