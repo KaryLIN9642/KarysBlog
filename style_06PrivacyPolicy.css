@@ -33,7 +33,7 @@ span{
   font-size: 1em;
   font-weight: 600;
   letter-spacing: 0.1em;
-  line-height: 2;
+  line-height: 2em;
 }
 
 /*------------ header ------------*/
@@ -134,6 +134,20 @@ section .comment a:hover{
   filter: drop-shadow(2px 8px 30px #b1afaf);
 }
 
+/*------------ Acknowledgement ------------*/
+section .acknowledgement{
+  background: #1c374a;
+  padding: 3em 6em;
+  text-align: center;
+  color: aliceblue;
+}
+.acknowledgement .ac{
+  color: #3475ca;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
 /*------------ Reference ------------*/
 section .reference{
   background: #1c374a;
@@ -223,6 +237,7 @@ footer ul li a:hover{
   section .attribution,
   section .privacy, 
   section .comment,
+  section .acknowledgement,
   section .reference{
     padding: 20px;
   }

@@ -108,7 +108,26 @@ section .kary:hover{
   background-image: none;
 }
 
+.testimonialBox .content a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #e9ecef;
+  color: #12222d;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow:6px 6px 16px rgba(0,0,0,0.3);
+}
+.testimonialBox .content a:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
 /* ---------- sample ---------- */
+/*
 section ul {
   position: absolute;
   bottom: 40px;
@@ -131,5 +150,5 @@ section .sample{
   font-family: 'Kaushan Script', cursive;
 }
 section .sample:hover{    
-    text-shadow: 0 1px 1px #ffffff; /*內崁效果*/
+    text-shadow: 0 1px 1px #ffffff; 內崁效果
 }

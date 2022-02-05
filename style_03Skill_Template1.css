@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+html, body{
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color:#e9ecef;
+}
+
+:root{
+  /* ---------- Colors ---------- */
+  --text-dark: #3f4954;
+  --text-light : #686666da;
+  --darkblue: #12222d; /*#111*/
+  --white: #ffffff;
+  --BlackCoral: #515E6F;
+  --darkred: #95070c;
+  --gray: #999;
+
+  /* ---------- gradient color ---------- */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  /* ---------- font-family ---------- */
+  /*
+  font-family:'Abel', sans-serif;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-family: 'Livvic', sans-serif;
+  */
+  
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-dark);
+}
+ul{
+  list-style-type: none;
+}
+
+h1{
+  font-family:'Lexend', sans-serif;
+  font-size: 2.5rem;
+}
+h2{
+  font-family:'Russo One', sans-serif;  
+  font-weight: 300;
+  color: var(--darkblue);
+}
+p{
+  font-family: 'Lexend', sans-serif;
+  color: var(--text-light);
+  text-align: justify;
+  line-height: 1.5em;
+  text-indent: 2em;
+}
+.container{
+    margin: 0 5vw;
+}
+
+
+/* ---------- Header ---------- */
+
+/* ---------- Navigation ---------- */
+nav{
+  background:var(--darkblue);
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 11vh;
+  overflow: hidden;
+  
+}
+nav .nav-menu{
+  display: flex;
+  flex-direction: row; /* 上2行語法可讓nav內的div不斷行而在同一行*/   
+  flex-wrap: wrap; /* 當螢幕變小時, div可換行*/ 
+  justify-content: space-between; /* 讓nav內的div分散對齊*/
+}
+nav ul{
+  display: flex;
+  margin: 0;
+}
+
+nav ul li{
+  padding: 1.6rem 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.1rem;  
+}
+
+nav ul li a{
+  color: var(--gray);
+}
+
+nav ul li:hover{
+  background-color: var(--BlackCoral);
+}
+
+nav ul li:hover a{
+  color: var(--white);
+}
+
+nav .nav-brand a{
+  padding: 1rem 0;
+  display: block; /*換行*/
+  font-family:'Poppins', sans-serif;
+}
+nav .nav-brand .kary{
+  position: relative;
+  font-size: 2.5em;
+  color:var(--white);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  transition: 0.5s;
+}
+nav .nav-brand .kary:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+main .content{
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+main .template-content{
+  width: 95%;    
+}
+
+main .content .template-content > .template-image, .template-title{
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+main .template-content .template-title a{
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5em;
+}
+
+main .template-content .template-title p span a{
+  font-size: 1em;
+}
+main .template-content .template-title p span a:hover{
+  color: #D33A2C;
+}
+
+
+
+.content .template-content .template-title .template-btn{
+  border: none;
+  border-radius: 2rem;
+  position: relative;
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  margin-top: 1em;
+  background: #e9ecef;
+  color: var(--bg);
+  text-decoration: none;
+  box-shadow:6px 6px 16px rgba(0,0,0,0.3);
+}
+.content .template-content .template-title .template-btn:hover{
+  background-color: var(--BlackCoral);
+  color: var(--white);
+  cursor: pointer;
+}/* 滑鼠移上去時變色*/
+
+.content .template-content .template-title .template-btn:active{
+  background-color: var(--BlackCoral);
+  box-shadow: 0 5px #888888;
+  transform: translateY(4px);
+}
+
+.content .template-content .template-title .template-btn a{
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+}
+.content .template-content .template-title .template-btn:hover a{
+  color: var(--white);
+}
+
+main .content .template-content > .template-image{
+width: 360px;
+}
+main .content .template-content > .template-image .template-info{
+  position: absolute;
+  padding: 1rem;  
+  bottom: 0%;
+  width: 325px;
+  height: 2em;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(225,225,225,0.2);
+  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+main .content .template-content > .template-image .template-info h3 {
+  font-family:'Abel', sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0.1em 0em;
+  line-height: 1.1em;
+}
+
+main .content .template-content > .template-image .template-info h3 span{
+  font-size: 0.6em;
+  font-weight: 300;
+}
+
+main .content .template-content > .template-image .img{
+  transition: all 1s ease;
+}
+
+main .content .template-content > .template-image .img:hover{
+  transform: scale(1.1);
+}
+
+main .content .template-content > .template-image > div{
+  overflow: hidden;
+}
+
+.content .pagination{
+  display: flex;
+  justify-content: center;
+  color: var(--text-dark);
+  margin: 4rem 0;
+}
+
+.content .pagination a{
+  padding: .5rem 1rem;
+  border-radius: 50%;
+  margin: 0 .3rem;
+  font-family: var(--Lexend);
+}
+
+.content .pagination .pages{
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+
+/* ---------- Sidebar ---------- */
+.content > .sidebar ul{
+  font-family:'Livvic', cursive;   
+}
+
+.content > .sidebar ul li{
+  background:var(--sky);
+  padding: .4rem 1rem;
+  margin: .8rem 0; 
+  border-top-right-radius:3em;
+  border-bottom-left-radius:3em;
+  border-top-left-radius:1em;
+  border-bottom-right-radius:1em;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content > .sidebar ul li a{
+  color: var(--darkblue);
+}
+
+.content .sidebar .popular-template .post-content{
+  padding: 1rem 0;
+}
+
+.content .sidebar .popular-template h2{
+  padding-top: 8rem;
+}
+
+.content .sidebar .popular-template .popular-template-info{
+  padding: .4rem .1rem;
+  bottom: 0rem;
+  left: 1.5rem;
+  border-radius: 0rem;
+  background: var(--white);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(225,225,225,0.2);
+  box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+}
+
+main .content .sidebar .popular-template .popular-template-info h3{
+  font-family:'Abel', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0em;
+  line-height: 1.1em;
+  box-shadow: -6px -6px 16px rgba(255,255,255,1);
+}
+
+main .content .sidebar .popular-template .popular-template-info h3 span{
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+footer{
+  position: relative;
+  height: auto;
+  padding: 40px;
+  background: var(--darkblue);
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  float: row;
+}
+
+footer .container .sec{
+  padding: 0 1em;
+  /*border:1px dashed #fff; for check*/
+}
+
+footer .container .sec.about{
+  width: 40%;
+}
+
+footer .container h2{
+  position: relative;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.5em;
+}
+
+footer .container h2:before{
+  content:'';
+  position: absolute;
+  bottom: -0.2em;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background: var(--darkred);
+}
+
+footer p{
+  color: var(--gray);
+}
+
+.sci{
+  margin-top: 1.5em;
+  display: flex;
+}
+
+.sci li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.75em;
+  border-radius: 20%;
+}
+
+.sci li a:hover{
+  background-color: var(--darkred);
+}
+
+.sci li a .fa{
+  color: var(--white);
+  font-size: 1.3em;
+}
+
+.quickLinks{
+  position: relative;
+  width:20%;
+}
+
+.quickLinks ul li{
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.quickLinks ul li a{
+  color: var(--gray);
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover{
+  color:  var(--white);
+  transform: scale(1.1);
+  filter: drop-shadow(2px 8px 30px #b1afaf);
+}
+
+.contact{
+  width: 25%;
+}
+
+.contact .info{
+  position: relative;
+}
+
+.contact .info li{
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.contact .info li span:nth-child(1){
+  color:  var(--white);
+  font-size: 1.3em;
+  margin-right: 0.75em;
+}
+
+.contact .info li a{
+  color: var(--gray);
+}
+
+.contact .info li a:hover{
+  color:  var(--white);
+}
+
+.copyright{  
+  justify-content: center;
+  background: #181818;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+  color: var(--gray);
+  font-family:'Dosis', sans-serif;
+}
+
+.copyright  span{
+  color: var(--white);
+  font-family: 'Russo One', sans-serif;
+}
+
+footer .pagetop{
+  position: absolute;
+  right: 5%;
+  top: 50%;
+}
+
+footer .pagetop a{
+  color: var(--darkred);
+}
+
+footer .pagetop a:hover{
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* ---------- For device less then 900px---------- */
+@media (max-width:900px){
+  main .content{
+    display: flex;
+  }
+  main .template-content{
+    width: 90%;
+  }  
+  main .content .template-content > .template-image{
+    width: 90%;
+  }
+  .content .sidebar {
+    display: none !important;
+  }
+  footer{
+    padding: 50px;
+  }
+  footer .container{
+    flex-direction: column;
+  }
+  footer .container .sec.about, .quickLinks, .contact{
+    width: 100%;
+  }
+
+}
+
+/* ---------- For device less then 600px---------- */
+@media (max-width: 600px){
+  .content .template-content > .template-image .template-info{
+    display: none;
+  }
+  main .template-content{
+    width: 80%;
+  }  
+  main .content .template-content > .template-image{
+    width: 80%;
+  }
+}
