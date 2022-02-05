@@ -151,7 +151,7 @@ a:hover{
   }
   
   .contact{
-    padding: 30px;
+    padding: 20px;
   }
 
   h1{
@@ -171,14 +171,17 @@ a:hover{
   h3{
     font-size: 1.1em;
   }
+  .posts .post-content .post-title{
+  font-size: 1.5em;
+ }
   h2{
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .text{
     color: #7aa4d5;
   }
   P{
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
 
 }
