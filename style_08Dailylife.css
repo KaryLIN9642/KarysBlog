@@ -165,6 +165,9 @@ a:hover{
 
 /* ---------- For device less then 600px---------- */
 @media (max-width:600px){
+  .contact .logo{
+    display: none;
+  }
   h1{
     font-size: 1.5em;
   }
