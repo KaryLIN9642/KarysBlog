@@ -35,6 +35,11 @@ span{
   letter-spacing: 0.1em;
   line-height: 2em;
 }
+hr{
+  height: .01em;
+  background: currentColor;
+  /*所有hr元素項文字一樣自動有相同顏色, 未來再用原生CSS控制顏色時, curentColor將會變得更實用*/
+}
 
 /*------------ header ------------*/
 header{
@@ -233,7 +238,7 @@ footer ul li a:hover{
   section{
     flex-direction: column;
   }
-    section .content,
+  section .content,
   section .attribution,
   section .privacy, 
   section .comment,
