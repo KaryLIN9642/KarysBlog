@@ -4,14 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
- @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 html, body{
   margin: 0%;
   box-sizing: border-box;
   overflow-x: hidden;
   background-color:#e9ecef;
+  font-family: 'Roboto', sans-serif;
 }
 
 :root{
@@ -63,7 +64,12 @@ p{
   text-indent: 2em;
 }
 .container{
-    margin: 0 5vw;
+  margin: 0 5vw;
+}
+hr{
+  height: .01em;
+  background: currentColor;
+  /*所有hr元素項文字一樣自動有相同顏色, 未來再用原生CSS控制顏色時, curentColor將會變得更實用*/
 }
 
 
