@@ -13,7 +13,8 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: radial-gradient(#9bdfff, #009be4);
+  /*background: radial-gradient(#9bdfff, #009be4); */
+  background: linear-gradient(#4172BE,#67a8f6 );/* Celtic blue,little boy blue */
 }
 
 
@@ -23,7 +24,7 @@ header .kary{
   top: 40px;
   left: 100px;
   font-size: 2.5em;
-  color: #650326;
+  color: #923147; /*#daebfe, #923147*/
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
@@ -34,6 +35,7 @@ header .kary{
 header .kary:hover{
     transform: scale(1.1);
     filter: drop-shadow(1px 8px 30px #b1afaf);
+    color: #daebfe;
 }
 
 /* ---------- Animation ---------- */
@@ -92,7 +94,7 @@ header .kary:hover{
   top:30%;
   display: block;
   font-size: 1.2em;
-  color: #666;
+  color: #daebfe; /*Beau blue*/
   white-space: nowrap;
   animation: animateText 12s infinite;
 }
@@ -119,7 +121,7 @@ header .kary:hover{
 @keyframes animateText2{
   0%{
     left: 300px;
-    color:#555;
+    color:#F8FF84; /*Canary*/
   }
   100%{
     left:-1000px;
@@ -140,7 +142,7 @@ header .kary:hover{
 @keyframes animateText3{
   0%{
     left: 300px;
-    color:#444;
+    color:#313f2d; /*rifle green*/
   }
   100%{
     left:-1000px;
