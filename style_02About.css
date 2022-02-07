@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(#9bdfff, #009be4);
+}
+
+
+/* ---------- Home ---------- */
+header .kary{
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 2.5em;
+  color: #650326;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+header .kary:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+/* ---------- Animation ---------- */
+.experience{
+  position: relative;
+  width: 900px;
+  height: 150px;
+  background: #12222d;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+  transform: perspective(700px) rotateX(60deg);
+}
+.experience::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(90deg, #b1afaf 0%, #b1afaf 70%, #12222d 70%, #12222d 100%);
+  background-size: 120px;
+  animation: animateRoad 1.5s linear infinite;
+}
+@keyframes animateRoad{
+  0%{
+    background-position: -120px;
+  }
+  100%{
+    background-position: 0px;
+  }
+}
+.experience::after{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  background: #333;
+  bottom: -30px;
+  transform-origin: top;
+  transform: perspective(500px) rotateX(-25deg);
+}
+.roadshadow{
+  position: absolute;
+  bottom: -95px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 94%;
+  height: 50px;
+  background: linear-gradient(#222, transparent);
+  opacity: 0.5;
+}
+
+.text{
+  position: absolute;
+  top:30%;
+  display: block;
+  font-size: 1.2em;
+  color: #666;
+  white-space: nowrap;
+  animation: animateText 12s infinite;
+}
+@keyframes animateText{
+  0%{
+    left: 300px;
+  }
+  100%{
+    left:-1000px;
+  }
+}    
+
+.text2{
+  position: absolute;
+  top:35%;
+  display: block;
+  font-size: 1.2em;
+  color: transparent;
+  white-space: nowrap;  
+  animation: animateText2 12s infinite;
+  animation-delay: 3s;
+  overflow: hidden;
+}
+@keyframes animateText2{
+  0%{
+    left: 300px;
+    color:#555;
+  }
+  100%{
+    left:-1000px;
+  }
+} 
+
+.text3{
+  position: absolute;
+  top:40%;
+  display: block;
+  font-size: 1.2em;
+  color: transparent;
+  white-space: nowrap;  
+  animation: animateText3 12s infinite;
+  animation-delay: 6s;
+  overflow: hidden;
+}
+@keyframes animateText3{
+  0%{
+    left: 300px;
+    color:#444;
+  }
+  100%{
+    left:-1000px;
+  }
+}
+
+.text4{
+  position: absolute;
+  top:45%;
+  display: block;
+  font-size: 1.2em;
+  color: transparent;
+  white-space: nowrap;  
+  animation: animateText4 12s infinite;
+  animation-delay: 9s;
+  overflow: hidden;
+}
+@keyframes animateText4{
+  0%{
+    left: 300px;
+    color:#333;
+  }
+  100%{
+    left:-1000px;
+  }
+}
+
+
+/* ---------- For device less then 1250px---------- */
+@media (max-width:1250px){
+  body, header{
+    padding: 10px;
+  }
+  header .kary {
+    font-size: 2em;
+    top:10px;
+    left:40px;
+  }
+}
