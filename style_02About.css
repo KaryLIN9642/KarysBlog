@@ -11,12 +11,45 @@
 body{
   display: flex;  
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   min-height: 100vh;
   /*background: radial-gradient(#9bdfff, #009be4); */
   background: linear-gradient(#4172BE,#67a8f6 );/* Celtic blue,little boy blue */
 }
 
+.cloud{
+  position: relative; 
+  width: 100%;
+  height: 500px;
+  background-size: cover; 
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cloud::before{
+  content:'';
+  position: absolute;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url(Icon/cloud.png);
+  background-size: cover;
+  animation: animate 18s infinite;
+  z-index: -1;
+  transform: scale(0.4);
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 720px 0;
+  }
+}
 
 /* ---------- Home ---------- */
 header .kary{
@@ -39,16 +72,16 @@ header .kary:hover{
 }
 
 /* ---------- Animation ---------- */
-.experience{
+.road{
   position: relative;
-  width: 900px;
+  width: 600px;
   height: 150px;
   background: #12222d;
   transform-origin: bottom;
   transform-style: preserve-3d;
   transform: perspective(700px) rotateX(60deg);
 }
-.experience::before{
+.road::before{
   content:'';
   position: absolute;
   top: 50%;
@@ -58,7 +91,7 @@ header .kary:hover{
   height: 10px;
   background: linear-gradient(90deg, #b1afaf 0%, #b1afaf 70%, #12222d 70%, #12222d 100%);
   background-size: 120px;
-  animation: animateRoad 1.5s linear infinite;
+  animation: animateRoad 1.5s infinite;
 }
 @keyframes animateRoad{
   0%{
@@ -68,7 +101,7 @@ header .kary:hover{
     background-position: 0px;
   }
 }
-.experience::after{
+.road::after{
   content:'';
   position: absolute;
   width: 100%;
@@ -135,7 +168,7 @@ header .kary:hover{
   font-size: 1.2em;
   color: transparent;
   white-space: nowrap;  
-  animation: animateText3 12s infinite;
+  animation: animateText3 12s linear infinite;
   animation-delay: 6s;
   overflow: hidden;
 }
@@ -156,7 +189,7 @@ header .kary:hover{
   font-size: 1.2em;
   color: transparent;
   white-space: nowrap;  
-  animation: animateText4 12s infinite;
+  animation: animateText4 12s linear infinite;
   animation-delay: 9s;
   overflow: hidden;
 }
@@ -173,7 +206,7 @@ header .kary:hover{
 
 /* ---------- For device less then 1250px---------- */
 @media (max-width:1250px){
-  body, header{
+  header{
     padding: 10px;
   }
   header .kary {
@@ -181,4 +214,7 @@ header .kary:hover{
     top:10px;
     left:40px;
   }
+  .cloud::before{
+  transform: scale(1,0.5);
+}
 }
