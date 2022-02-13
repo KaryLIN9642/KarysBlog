@@ -91,7 +91,7 @@ header .kary:hover{
   height: 10px;
   background: linear-gradient(90deg, #b1afaf 0%, #b1afaf 70%, #12222d 70%, #12222d 100%);
   background-size: 120px;
-  animation: animateRoad 1.5s infinite;
+  animation: animateRoad 1.5s linear infinite;
 }
 @keyframes animateRoad{
   0%{
