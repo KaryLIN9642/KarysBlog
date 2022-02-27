@@ -78,6 +78,13 @@
   background-position: center;
   opacity: 0.9;
 }
+.container .contact:nth-child(5){
+  background: url(bg/bg-08-04.jpg);
+  background-size: cover;
+  background-attachment: fixed;  
+  background-position: center;
+  opacity: 0.9;
+}
 
 .container .contact .posts, .post-content{  
   max-width: 700px;
