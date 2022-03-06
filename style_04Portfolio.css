@@ -249,21 +249,14 @@ h2{
   border-radius: 15px;
 }
 
-.container .box:hover{
-  transform: scale(1.05);
-   filter: drop-shadow(1px 8px 30px #b1afaf);
-}
-/*
-.container .box > div{
-  overflow: hidden;
+section .container .box .img{
+  transition: all 1s ease;
 }
 
-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.container .img:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
 }
-*/
 
 .container .box .content{
   position: absolute;
@@ -283,7 +276,7 @@ img{
 }
 
 .container .box:hover .content{
-  bottom: 0px;
+  top: 0px;
   transition-delay:0s;
 }
 
