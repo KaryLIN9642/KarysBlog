@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
 
 
@@ -121,8 +122,8 @@ text{
 }
 .container .content .contentBx:nth-child(1){
   position: absolute;
-  top: 6.5em; 
-  left: 9em;
+  top: 6.3em; 
+  left: 8.5em;
   color: #358442;
   border:0.2em dotted #358442;
   color:#12222d;
@@ -224,38 +225,51 @@ text{
   z-index: 2;
 }
 
+.Info{
+  padding:3em 5em;
+}
+.Info h3 span a{
+  font-family: 'Anton', sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  color:#3f4954;
+}
+.Info h3 span a:hover{
+  color: #E4010B;
+}
 
 /* ---------- Next ---------- */
-.previous{
-  position: absolute;
-  bottom: 2%;
-  left: 3%;
+.pagination{
+  display: flex;
+  justify-content: flex-end;
+  padding:0em 5em;  
+  color: #3f4954;
+  margin: 0.5em 0;
 }
-
-.previous a{
+.pagination a{
+  padding: 1em;
   color: #12222d;
 }
-
-.previous a:hover{
+.pagination a:hover{
   color: #ffffff;
   cursor: pointer;
 }
 
-.nextskill{
-  position: absolute;
-  bottom: 2%;
-  right: 3%;
-}
-
-.nextskill a{
-  color: #12222d;
-}
-
-.nextskill a:hover{
-  color: #ffffff;
-  cursor: pointer;
-}
 
 /* ---------- Footer ---------- */
+.copyright{  
+  justify-content: center;
+  background: #999;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+  color: #181818;
+  font-family:'Dosis', sans-serif;
+  font-size: 0.8em;
+}
+
+.copyright  span{
+  color: #fff;
+  font-family: 'Russo One', sans-serif;
+}
 
 
