@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kristi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
 
 *{
   margin:0;
@@ -139,6 +141,12 @@ p{
   margin-top: 0.2em;  
 }
 
+h4{
+  font-size: 0.8em; 
+  text-align: right;
+  color: #fff;
+}
+
 span{
   color:#023459;
   font-weight: 600;
@@ -199,6 +207,9 @@ a:hover{
   }
   P{
     font-size: 0.65em;
+  }
+  h4{
+    font-size: 0.5em;
   }
 
 }
