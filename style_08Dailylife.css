@@ -6,23 +6,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 
-*{
-  margin:0;
-  padding:0; 
-  box-sizing: border-box; /* RWD很好用 */
-  font-family: 'Poiret One', cursive; 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* RWD很好用 */
+  font-family: 'Poiret One', cursive;
 }
 
-.container{
+.container {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: auto;
-  scroll-snap-type: y mandatory ;
+  scroll-snap-type: y mandatory;
 }
 
 /* ---------- Home ---------- */
-.contact .logo{
+.contact .logo {
   position: absolute;
   top: 40px;
   left: 100px;
@@ -36,13 +37,13 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.contact .logo:hover{
+.contact .logo:hover {
   transform: scale(1.1);
   filter: drop-shadow(1px 8px 30px #023459);
 }
 
 /* ---------- Content ---------- */
-.container .contact{
+.container .contact {
   position: relative;
   width: 100%;
   height: 100%;
@@ -53,81 +54,94 @@
   align-items: center;
 }
 
-.container .contact:nth-child(1){
+.container .contact:nth-child(1) {
   background: url(bg/bg-08Dailylife.jpg);
   background-size: cover;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-position: center;
 }
-.container .contact:nth-child(2){
+
+.container .contact:nth-child(2) {
   background: url(bg/bg-08-01.jpg);
   background-size: cover;
-  background-attachment: fixed;  
-  background-position: center;
-  opacity: 0.9;
-}
-.container .contact:nth-child(3){
-  background: url(bg/bg-08-02.jpg);
-  background-size: cover;
-  background-attachment: fixed;  
-  background-position: center;
-  opacity: 0.9;
-}
-.container .contact:nth-child(4){
-  background: url(bg/bg-08-03.jpg);
-  background-size: cover;
-  background-attachment: fixed;  
-  background-position: center;
-  opacity: 0.9;
-}
-.container .contact:nth-child(5){
-  background: url(bg/bg-08-04.jpg);
-  background-size: cover;
-  background-attachment: fixed;  
+  background-attachment: fixed;
   background-position: center;
   opacity: 0.9;
 }
 
-.container .contact .posts, .post-content{  
+.container .contact:nth-child(3) {
+  background: url(bg/bg-08-02.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.container .contact:nth-child(4) {
+  background: url(bg/bg-08-03.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.container .contact:nth-child(5) {
+  background: url(bg/bg-08-04.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.container .contact:nth-child(6) {
+  background: url(bg/bg-08-JeanGoode.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.container .contact .posts,
+.post-content {
   max-width: 700px;
 }
 
-.container .contact .posts .text{
+.container .contact .posts .text {
   font-family: 'Kristi', sans-serif;
   font-size: 1.5em;
   text-align: justify;
 }
 
 /* ---------- posts ---------- */
-h1{
+h1 {
   font-family: 'Rock Salt', cursive;
   font-size: 2em;
   color: #00142F;
   text-align: right;
 }
 
-.posts .post-content .post-title{
+.posts .post-content .post-title {
   font-family: 'Poiret One', sans-serif;
   font-size: 1.75em;
   color: #023459;
 }
 
-h3{
+h3 {
   font-family: 'Kristi', sans-serif;
   font-size: 1.25em;
 }
 
-h2{
-  background: #fff;  
+h2 {
+  background: #fff;
   opacity: 0.8;
-  color: #222;  
+  color: #222;
   font-size: 2em;
   font-weight: 600;
   display: inline-block;
-  padding: 10px 20px;  
+  padding: 10px 20px;
 }
 
-p{
+p {
   font-family: 'Poppins', sans-serif;
   background: #fff;
   opacity: 0.6;
@@ -138,26 +152,27 @@ p{
   text-indent: 2em;
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 0.2em;  
+  margin-top: 0.2em;
 }
 
-h4{
-  font-size: 0.8em; 
+h4 {
+  font-size: 0.8em;
   text-align: right;
   color: #fff;
 }
 
-span{
-  color:#023459;
+span {
+  color: #023459;
   font-weight: 600;
 }
 
-a{
+a {
   text-decoration: none;
-  color:#95070c;
+  color: #95070c;
   font-weight: 700;
 }
-a:hover{
+
+a:hover {
   color: #191970;
   text-transform: uppercase;
   filter: drop-shadow(1px 8px 30px #95070c);
@@ -165,54 +180,62 @@ a:hover{
 
 
 /* ---------- For device less then 1250px---------- */
-@media (max-width:1250px){
-  .contact .logo{
+@media (max-width:1250px) {
+  .contact .logo {
     top: 10px;
     left: 50px;
     font-size: 1.5em;
   }
-  
-  .contact{
+
+  .contact {
     padding: 20px;
   }
 
-  h1{
+  h1 {
     font-family: 'Rock Salt', cursive;
     font-size: 1.5em;
     color: #00142F;
     text-align: center;
-    }
+  }
 
 }
 
 /* ---------- For device less then 600px---------- */
-@media (max-width:600px){
-  .contact .logo{
+@media (max-width:600px) {
+  .contact .logo {
     display: none;
   }
-  h1{
+
+  h1 {
     font-size: 1.5em;
   }
-  h3{
+
+  h3 {
     font-size: 1.1em;
   }
-  .posts .post-content .post-title{
-  font-size: 1.5em;
- }
-  h2{
+
+  .posts .post-content .post-title {
+    font-size: 1.5em;
+  }
+
+  h2 {
     font-size: 1.1em;
   }
-  .text{
+
+  .text {
     color: #7aa4d5;
   }
-  P{
+
+  P {
     font-size: 0.65em;
   }
-  h4{
+
+  h4 {
     font-size: 0.5em;
   }
 
+  .container .contact:nth-child(6) {
+    background-position: 500px;
+  }
+
 }
-
-
-
