@@ -62,7 +62,7 @@
 }
 
 .container .contact:nth-child(2) {
-  background: url(bg/bg-08-01.jpg);
+  background: url(bg/bg-08-Clarissa.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -70,7 +70,7 @@
 }
 
 .container .contact:nth-child(3) {
-  background: url(bg/bg-08-02.jpg);
+  background: url(bg/bg-08-01.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -78,7 +78,7 @@
 }
 
 .container .contact:nth-child(4) {
-  background: url(bg/bg-08-03.jpg);
+  background: url(bg/bg-08-02.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -86,7 +86,7 @@
 }
 
 .container .contact:nth-child(5) {
-  background: url(bg/bg-08-04.jpg);
+  background: url(bg/bg-08-03.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -94,7 +94,7 @@
 }
 
 .container .contact:nth-child(6) {
-  background: url(bg/bg-08-JeanGoode.jpg);
+  background: url(bg/bg-08-04.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -102,6 +102,14 @@
 }
 
 .container .contact:nth-child(7) {
+  background: url(bg/bg-08-JeanGoode.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.container .contact:nth-child(8) {
   background: url(bg/bg-08-06.jpg);
   background-size: cover;
   background-attachment: fixed;
