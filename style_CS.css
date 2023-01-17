@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', "微軟正黑體", sans-serif;
+  /* box-sizing: border-box; */
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/template/background01.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ---------- Navigation ---------- */
+header {
+  background: #18203d;
+  padding: 0 2rem;
+  height: 0rem;
+  min-height: 11vh;
+  overflow: hidden;
+}
+
+header .nav-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+}
+
+header ul li {
+  padding: 1.6rem 1rem;
+  font-size: 1.1rem;
+  position: relative;
+  font-family: 'Dosis', "微軟正黑體", sans-serif;
+}
+
+header ul li a {
+  color: #999;
+}
+
+header ul li:hover {
+  background-color: #515E6F;
+}
+
+header ul li:hover a {
+  color: #fff;
+}
+
+header .nav-brand a {
+  padding: 1rem 0;
+  display: block;
+  font-family: 'Poppins', "微軟正黑體", sans-serif;
+}
+
+header .nav-brand .kary {
+  position: absolute;
+  left: 30px;
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+header .nav-brand .kary:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
+}
+
+
+/* ---------- Main Content ---------- */
+.container {
+  width: 480px;
+  margin: 8% auto;
+  margin-top: 10px;
+  background: #eaeef0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+h2,
+h5 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #777;
+}
+
+h5 {
+  margin-bottom: 30px;
+}
+
+.container .box {
+  /* width: 480px; */
+  /* border: 0.5px dotted palevioletred; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.group {
+  position: relative;
+  width: 350px;
+  /* border: 0.5px dotted gray; */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  /* border: 1px solid rgba(255, 255, 255, 0.25); */
+  border: none;
+  background: #eaeef0;
+  border-radius: 8px;
+  outline: none;
+  color: #404040;
+  font-size: 1em;
+  box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 5px rgba(255, 255, 255, 1);
+}
+
+.group span {
+  position: absolute;
+  left: 0;
+  top: -7px;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 0.9em;
+  color: #777;
+  transition: 0.5s;
+}
+
+.group input:valid~span,
+.group input:focus~span {
+  color: #5c89ff;
+  transform: translateX(5px) translateY(-8px);
+  font-size: 0.6em;
+  padding: 0 10px;
+  background: #eaeef0;
+  letter-spacing: 0.1em;
+}
+
+.group input:valid,
+.group input:focus {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/*just only for english version*/
+.group p {
+  font-size: 6px;
+  color: #999;
+  text-align: right;
+}
+
+.container .box input::placeholder {
+  color: #999;
+  font-size: 0.3em;
+  text-align: right;
+  transform: translateY(10px);
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0.4rem 0.4rem 1rem #ccc,
+    -0.4rem -0.4rem 1rem #fff;
+}
+
+.btn:hover {
+  box-shadow: 0.4rem 0.4rem 1rem #ccc inset,
+    -0.4rem -0.4rem 1rem #fff inset;
+  color: #4fce5d;
+}
+
+.btn i:hover {
+  color: #4fce5d;
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: #5c89ff;
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+#CS {
+  margin-bottom: 10px;
+  height: 50px;
+  width: 180px;
+  font-size: 25px;
+  padding: 5px 15px;
+  color: #5c89ff;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 1),
+    8px 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: right;
+}
+
+.span {
+  position: relative;
+  left: 5px;
+  top: -65px;
+  pointer-events: none;
+  font-size: 0.65em;
+  color: #888;
+}
+
+.rf {
+  text-align: justify;
+  font-size: 8px;
+  color: #999;
+  padding: 10px;
+}
+
+/* ---------- Counter ---------- */
+.counter {
+  text-align: center;
+  color: #F3F4F7;
+  font-family: 'Russo One', "微軟正黑體", sans-serif;
+}
+
+.counter h2 {
+  font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  position: relative;
+  height: auto;
+  padding: 10px;
+}
+
+footer p {
+  position: absolute;
+  left: 3%;
+  color: #999;
+  padding: 20px;
+}
+
+.pagetop {
+  position: absolute;
+  right: 3%;
+}
+
+.pagetop a {
+  color: #95070c;
+}
+
+.pagetop a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.copyright {
+  justify-content: center;
+  background: #181818;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+  color: #999;
+  font-family: 'Dosis', "微軟正黑體", sans-serif;
+}
+
+.copyright span {
+  color: #fff;
+  font-family: 'Russo One', "微軟正黑體", sans-serif;
+}
+
+
+
+/* ---------- For device less then 500px---------- */
+
+@media (max-width:500px) {
+  nav {
+    padding: 10px 20px;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  h1 span {
+    display: block;
+  }
+
+  .container {
+    width: 80%;
+    /* border: 0.5px dotted blue; */
+  }
+
+  .group {
+    width: 80%;
+  }
+
+  .rf {
+    padding: 10px 20px;
+  }
+
+}

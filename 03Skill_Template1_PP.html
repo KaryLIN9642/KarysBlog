@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="03Skill_Template1.html">Excel</a></li>
                     <li><a href="03Skill_Template1_PP.html">PowerPoint</a></li>
-                    <li><a href="#">Website</a></li>
+                    <li><a href="Carbon Storage_EN.html">Website</a></li>
                 </ul>
             </div>
         </div>
@@ -111,52 +111,80 @@
                 </aside>
             </div>
         </section>
+    </main>
 
-        <!-- ---------- Footer ---------- -->
-        <footer>
-            <div class="container">
-                <div class="sec about">
-                    <h2>About</h2>
-                    <p>I am a civil engineer with 20 years of experience and a beginner in programming. This is my first
-                        website designed by a programming language. If you have further comments, please do not hesitate
-                        to
-                        contact me.</p>
-                    <ul class="sci">
-                        <li><a href="https://www.linkedin.com/in/kary-lin-5aa55566/"><i class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a href="https://twitter.com/lin_kary"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li><a href="https://www.instagram.com/jesuiskarylin/"><i class="fa fa-instagram"
-                                    aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-                <div class="sec quickLinks">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="02About.html">About me</a></li>
-                        <li><a href="03Skill.html">Skill</a></li>
-                        <li><a href="04Portfolio.html">Portfolio</a></li>
-                        <li><a href="05ContactFome.html">Contact</a></li>
-                        <li><a href="08Dailylife.html">A day in the life of</a></li>
-                        <li><a href="06PrivacyPolicy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="sec contact">
-                    <h2>Contact Info</h2>
-                    <ul class="info">
-                        <li>
-                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span><a
-                                href="mailto:karycklin@gmail.com">karycklin@gmail.com</a>
-                        </li>
-                    </ul>
-                </div>
+    <!-- ---------- Footer ---------- -->
+    <footer>
+        <div class="container">
+            <div class="sec about">
+                <h2>About</h2>
+                <p>I am a civil engineer with 20 years of experience and a beginner in programming. This is my first
+                    website designed by a programming language. If you have further comments, please do not hesitate
+                    to
+                    contact me.</p>
+                <ul class="sci">
+                    <li><a href="https://www.linkedin.com/in/kary-lin-5aa55566/"><i class="fa fa-linkedin"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/lin_kary"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/jesuiskarylin/"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-            <div class="pagetop"><a href="#top"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></div>
-            <!-- 透過瀏覽器點選回到開頭 -->
-        </footer>
-        <div class="copyright">
-            Copyright ©2022 All Rights Reserved | design by <span>Kary LIN</span>
+            <div class="sec quickLinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="02About.html">About me</a></li>
+                    <li><a href="03Skill.html">Skill</a></li>
+                    <li><a href="04Portfolio.html">Portfolio</a></li>
+                    <li><a href="05ContactFome.html">Contact</a></li>
+                    <li><a href="08Dailylife.html">A day in the life of</a></li>
+                    <li><a href="06PrivacyPolicy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa fa-envelope" aria-hidden="true"></i></span><a
+                            href="mailto:karycklin@gmail.com">karycklin@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="pagetop"><a href="#top"><i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a></div>
+        <!-- 透過瀏覽器點選回到開頭 -->
+
+        <!-- ---------- Counter ---------- -->
+        <div class="counter">
+            <h2 id="count"></h2>
+            <p><small>Vistors</small></p>
+        </div>
+
+    </footer>
+    <div class="copyright">
+        Copyright ©2023 All Rights Reserved | design by <span>Kary LIN</span>
+    </div>
+
+    <!-- Counter JS-->
+    <script>
+        const count = document.getElementById("count");
+        incrementVisitsCount();
+
+        function incrementVisitsCount() {
+            let visits;
+
+            if (!localStorage.getItem("visits")) localStorage.setItem("visits", 1);
+            else {
+                visits = +localStorage.getItem("visits");
+                const incrementedCount = visits + 1;
+
+                localStorage.setItem("visits", incrementedCount);
+            }
+
+            count.innerText = localStorage.getItem("visits");
+        }
+    </script>
 
 </body>
 

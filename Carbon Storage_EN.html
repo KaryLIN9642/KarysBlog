@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kary LIN">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="Kary's Blog, Excel, Civil Engineering, Standardization, ISO">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eb0d7b416b.js" crossorigin="anonymous"></script>
+
+    <title>Carbon Emissions</title>
+
+    <link rel="stylesheet" href="style_CS.css">
+
+
+    <!-- -------- JS -------- -->
+    <script type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- ---------- Header ---------- -->
+    <header>
+        <div class="nav-brand">
+            <a href="Index.html" class="kary">Kary's</a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="Carbon Storage.html">CH</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- -------- Nav -------- -->
+
+
+    <!-- -------- Main Content -------- -->
+    <div class="container">
+        <h2>Carbon Storage Calculator of plants in Taiwan</h2>
+        <h5>台灣樹種碳儲量估算器</h5>
+        <br>
+
+        <div class="box">
+            <div class="group">
+                <input type="text" id="density" name="density" required="required">
+                <span>Wood density(g/cm³)</span>
+            </div>
+            <div class="group">
+                <input type="text" id="CF" name="CF" required="required">
+                <span>Carbon fraction(%)</span>
+            </div>
+            <div class="group">
+                <input type="text" id="DBH" name="DBH" required="required">
+                <span>DBH of tree(cm)</span>
+                <p><small>Diameter at breast height(DBH) need to ≧ 5cm</small></p>
+            </div>
+            <div class="group">
+                <input type="text" id="height" name="height" required="required">
+                <span>Tree height(m)</span>
+                <p><small>Tree height need to ≧ 1m</small></p>
+            </div>
+            <div class="group">
+                <input type="text" id="BEF" name="BEF" required="required">
+                <span>Biomass expansion factor</span>
+                <p><small>If total above-ground biomass is included, the BEF can be considered as 1</small></p>
+            </div>
+            <div class="group">
+                <input type="text" id="R" name="R" required="required">
+                <span>Root-to-shoot ration</span>
+                <p><small>Please refer table 4.4 of IPCC2006</small></p>
+            </div>
+
+            <div class="btn">
+                <button onclick="cal()"><i class="fa fa-calculator fa-3x"></i></button>
+            </div>
+
+            <div class="result">
+                <input type="text" id="CS">
+                <p class="span">Carbon Storage(kg)</p>
+            </div>
+        </div>
+
+        <div class="rf">
+            <h6>Reference</h6>
+            <p><small>1.IPCC(2006), 2006 IPCC Guidellines for National Greenhouse Gas Inventories. Vol 4:
+                    Agriculture, Forestry, and Other Land Use. IGES, Hayama, Japan。</small></p>
+            <p><small>2.趙國容、李佾儒、宋國彰、趙偉村、張楊家豪、江智民 (2022) 水土保持樹種碳存量估算參數之資料庫。中華水土保持學報，53 (2)，100-110。</small></p>
+        </div>
+    </div>
+
+
+    <!-- ---------- Counter ---------- -->
+    <div class="counter">
+        <h2 id="count"></h2>
+        <p><small>Vistors</small></p>
+    </div>
+
+
+    <!-- -------- Footer -------- -->
+    <footer></footer>
+    <div class="copyright">
+        Copyright ©2023 All Rights Reserved | design by <span>Kary LIN</span>
+    </div>
+
+    <script>
+        function cal() {
+            D = document.getElementById("density").value;
+            C = document.getElementById("CF").value;
+            d = document.getElementById("DBH").value;
+            H = document.getElementById("height").value;
+            B = document.getElementById("BEF").value;
+            R = document.getElementById("R").value;
+
+            var totals = cal2(D, C, d, H, B, R);
+            totals = totals.toFixed(2);
+            document.getElementById("CS").value = totals;
+        }
+
+        function cal2(D, C, d, H, B, R) {
+            return (0.0673 * (Number(D) * Number(d) ** 2 * Number(H)) ** 0.976 * Number(B) * (1 + Number(R)) * Number(C) / 100);
+        }
+
+        const count = document.getElementById("count");
+        incrementVisitsCount();
+
+        function incrementVisitsCount() {
+            let visits;
+
+            if (!localStorage.getItem("visits")) localStorage.setItem("visits", 1);
+            else {
+                visits = +localStorage.getItem("visits");
+                const incrementedCount = visits + 1;
+
+                localStorage.setItem("visits", incrementedCount);
+            }
+
+            count.innerText = localStorage.getItem("visits");
+        }
+    </script>
+
+
+</body>
+
+</html>

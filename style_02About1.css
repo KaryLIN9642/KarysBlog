@@ -1,0 +1,1010 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+/* 中文字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
+/* 手寫字體 */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* 未來感字體 */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+/* ---------- fonts ---------- */
+/* * {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Lexend', sans-serif;
+  font-family: 'Livvic', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poiret One', cursive;
+
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Zhi Mang Xing', cursive;
+
+  font-family: 'Kaushan Script', cursive;
+  font-family: 'Nova Oval', cursive;
+  font-family: 'Rock Salt', cursive;
+
+  font-family: 'Abel', sans-serif;
+  font-family: 'Dosis', sans-serif;  
+  font-family: 'Russo One', sans-serif;
+  font-family: 'Nova Mono', monospace;
+
+  font-family: "FontAwesome";
+} */
+
+/* ---------- Color ---------- */
+/* * {
+  color: transparent;
+  color: #b1afaf;
+  color: #12222d;
+  color: #162c3b;
+  color: #F3F4F7;
+  color: #404040;
+  color: #515E6F;
+} */
+
+:root {
+  /* ---------- Colors ---------- */
+  --pink: #fb839e;
+  --green: #27ae60;
+  --tealbule: #00708B;
+  --white: #fff;
+  --black: #404040;
+  --gray: #777;
+  --bg: #e6e6e6;
+  --timeline: #ccc;
+
+  /* ---------- border ---------- */
+  --border: 0.1rem solid #ACB9CA;
+  --border-timeline: 0.1rem solid #ccc;
+
+  /* ---------- box-shadow ---------- */
+  --outer-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --inner-shadow: inset 0.4rem 0.4rem 1rem #ccc, inset -0.4rem -0.4rem 1rem #fff;
+
+  /* --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8; */
+
+}
+
+.fa-times::before {
+  content: "\f00d";
+}
+
+body {
+  background: var(--bg);
+  padding-left: 30rem;
+}
+
+body.stop-scrolling {
+  overflow-y: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* <---------- Dark Mode ---------- */
+body.active {
+  --black: #eff0f4;
+  --gray: #ddd;
+  --bg: #222;
+  /* --border: 0.1rem solid rgba(0, 0, 0, 0.2); */
+  --timeline: #333;
+  --border-timeline: 0.1rem solid #333;
+  --border: 0.1rem solid #353535;
+  --outer-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+  --inner-shadow: inset 0.4rem 0.4rem 1rem #111, inset -0.4rem -0.4rem 1rem #333;
+}
+
+/* ---------- Dark Mode ----------> */
+
+
+section {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  border-radius: 0.8rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: none;
+  box-shadow: var(--outer-shadow);
+  color: var(--black);
+}
+
+.btn:hover {
+  box-shadow: var(--inner-shadow);
+  color: var(--tealbule);
+}
+
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--black);
+  padding-bottom: 2.5rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--tealbule);
+}
+
+/* ---------- Header ---------- */
+header {
+  background: var(--bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  /* height: 100%; */
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  border-right: var(--border);
+  z-index: 999;
+}
+
+header .kary .img-box {
+  max-width: 15rem;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  padding: 1rem;
+  box-shadow: var(--inner-shadow);
+  margin-bottom: 1rem;
+}
+
+header .kary img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1rem solid transparent;
+  box-shadow: var(--outer-shadow);
+}
+
+header .kary h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--black);
+}
+
+header .kary p {
+  font-size: 1.5rem;
+  color: var(--tealbule);
+}
+
+header nav {
+  padding-top: 1rem;
+}
+
+header nav a {
+  display: block;
+  margin: 1.2rem 0;
+  padding: 0.6rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  box-shadow: var(--outer-shadow);
+  color: var(--black);
+}
+
+header nav a:hover {
+  box-shadow: var(--inner-shadow);
+  color: var(--tealbule);
+}
+
+/* ---------- Counter ---------- */
+.counter {
+  color: var(--gray);
+}
+
+.counter h2 {
+  font-weight: 700;
+  color: var(--pink);
+  margin-bottom: 0;
+}
+
+/* ---------- for RWD menu ---------- */
+#menu-btn {
+  position: fixed;
+  top: 8rem;
+  left: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: var(--black);
+  background: var(--bg);
+  box-shadow: var(--outer-shadow);
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#menu-btn:hover {
+  box-shadow: var(--inner-shadow);
+  color: var(--tealbule);
+}
+
+/* ---------- Dark Mode ---------- */
+#theme-toggler {
+  position: fixed;
+  top: 1.5rem;
+  /* right: 2rem; */
+  left: 2rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 4rem;
+  text-align: center;
+  color: var(--black);
+  background: var(--bg);
+  box-shadow: var(--outer-shadow);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#theme-toggler:hover {
+  box-shadow: var(--inner-shadow);
+  color: #f2da62;
+}
+
+/* ---------- Main Content ---------- */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+}
+
+/* .home .content h3 {
+  font-size: 5rem;
+  color: var(--black);
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+} */
+
+.about .content p {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  line-height: 2;
+  text-align: justify;
+  text-indent: 3rem;
+  text-transform: none;
+  color: var(--gray);
+  padding-bottom: 0.5rem;
+}
+
+.about .content p span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--tealbule);
+}
+
+.about .socialmedia {
+  position: relative;
+  top: 5rem;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.about .socialmedia a {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 0.8rem;
+  line-height: 5rem;
+  margin: 0.5rem;
+  font-size: 2rem;
+  box-shadow: var(--outer-shadow);
+  color: var(--black);
+}
+
+.about .socialmedia a:hover {
+  box-shadow: var(--inner-shadow);
+  color: var(--tealbule);
+}
+
+/* ---------- Education ---------- */
+.timeline {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+/* 中線 */
+.timeline:before {
+  content: '';
+  width: 0.1rem;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  background: var(--timeline);
+  position: absolute;
+
+}
+
+.timeline .timeline-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 3.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline .timeline-item {
+  padding-right: calc(50% + 5rem);
+  text-align: right;
+}
+
+.timeline .timeline-item-inner {
+  padding: 2rem;
+  border-radius: 0.8rem;
+  position: relative;
+  box-shadow: var(--outer-shadow);
+}
+
+
+/* 橫線 */
+.timeline .timeline-item-inner:before {
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 0.1rem;
+  background: var(--timeline);
+  top: 3.6rem;
+  z-index: -1;
+}
+
+.timeline .timeline-item .timeline-item-inner:before {
+  right: -3rem;
+}
+
+.timeline .timeline-item-inner .icon {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  text-align: center;
+  background: var(--bg);
+  border: var(--border-timeline);
+  color: var(--tealbule);
+  position: absolute;
+  top: 1.8rem;
+  /* box-shadow: var(--outer-shadow); */
+}
+
+.timeline .timeline-item .icon {
+  right: -7rem;
+}
+
+.timeline .timeline-item-inner span,
+.timeline .timeline-event-inner span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--tealbule);
+  display: block;
+  margin: 0 0 1rem;
+}
+
+.timeline .timeline-item-inner h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0 0 0.5rem;
+}
+
+.timeline .timeline-item-inner h4 {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--gray);
+  margin: 0;
+}
+
+.timeline .timeline-event {
+  flex: 0 0 100%;
+  padding: 0 3.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.timeline .timeline-event {
+  padding-left: calc(50% + 3rem);
+}
+
+.timeline .timeline-event-inner {
+  padding: 1rem;
+  border-radius: 0.8rem;
+  position: relative;
+  box-shadow: var(--inner-shadow);
+}
+
+.timeline .timeline-event-inner:before {
+  content: '';
+  position: absolute;
+  width: 3rem;
+  height: 0.1rem;
+  background: var(--timeline);
+  top: 3rem;
+  z-index: -1;
+}
+
+.timeline .timeline-event .timeline-event-inner:before {
+  left: -3rem;
+}
+
+.timeline .timeline-event-inner span {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.timeline .timeline-event-inner p {
+  font-size: 1.3rem;
+  text-transform: none;
+  color: var(--gray);
+  margin: 0 1rem 0;
+}
+
+
+/* ---------- Portfolio ---------- */
+.portfolio .portfolio-filter {
+  /* background-color: #00708B; */
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.portfolio .filter-item {
+  /* border: 1px solid rosybrown; */
+  display: inline-block;
+  margin: 0 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.portfolio .filter-item:hover:not(.active) {
+  opacity: 0.6;
+}
+
+.portfolio .filter-item:hover.active {
+  box-shadow: var(--inner-shadow);
+}
+
+.portfolio .filter-item.active {
+  box-shadow: var(--outer-shadow);
+  color: var(--tealbule);
+}
+
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 寫js時加入的.hide and show */
+.portfolio .portfolio-item.hide {
+  display: none;
+}
+
+.portfolio .portfolio-item.show {
+  display: block;
+  animation: fadeInTop 0.5s ease;
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2.5rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio .portfolio-item-inner {
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  width: 100%;
+  box-shadow: var(--outer-shadow);
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item-img img {
+  border-radius: 0.8rem;
+  width: 100%;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-item-img img {
+  transform: translateY(-2.5rem);
+}
+
+.portfolio .portfolio-item-img {
+  position: relative;
+}
+
+.portfolio .portfolio-item-img .view-project {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--tealbule);
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  transform: translateY(-0.5rem);
+  z-index: -1;
+  opacity: 0;
+}
+
+.portfolio .portfolio-item-inner:hover .view-project {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio .portfolio-item-details {
+  display: none;
+}
+
+.portfolio .portfolio-item-inner p {
+  font-size: 1.6rem;
+  /* font-weight: 600; */
+  margin: 1rem 0 0;
+  color: var(--black);
+}
+
+.portfolio .portfolio-item-inner .portfolio-item-title-en {
+  color: var(--gray);
+}
+
+/* ---- portfolio popup ---- */
+.portfolio-popup {
+  background: var(--bg);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: scroll;
+  /* 版面設計結束後, 最後在隱藏step2 */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* js 對應 */
+.portfolio-popup.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-popup .pp-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1001;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.portfolio-popup .pp-loader.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-popup .pp-loader div {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  /* background-color: #00708B; */
+  border: 0.3rem solid var(--pink);
+  border-right: 0.3rem solid transparent;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.portfolio-popup .pp-details {
+  /* background-color: #00708B; */
+  max-width: 1200px;
+  width: calc(80% + 3rem);
+  margin: auto;
+  /* 版面設計結束後, 最後在隱藏step1 */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* js projectDetailsContaier新增 */
+.portfolio-popup .pp-details.active {
+  opacity: 1;
+}
+
+.portfolio-popup .pp-details-inner {
+  padding: 3rem 0;
+}
+
+.portfolio-popup .pp-title {
+  padding: 0 1.5rem;
+}
+
+.portfolio-popup .pp-title h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0 0 0.5rem;
+}
+
+.portfolio-popup .pp-title p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray);
+  margin: 0 0 1.5rem;
+  border-bottom: 0.2rem solid var(--timeline);
+  padding-bottom: 1rem;
+}
+
+.portfolio-popup .pp-title p span {
+  font-weight: 400;
+}
+
+.portfolio-popup .pp-project-details {
+  padding: 0 1.5rem;
+}
+
+.portfolio-popup .pp-project-details h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--black);
+  opacity: 0.8;
+  margin: 0 0 1.5rem;
+}
+
+.portfolio-popup .description {
+  flex: 0 0 65%;
+  max-width: 65%;
+  padding: 0 1.5rem;
+}
+
+.portfolio-popup .description p {
+  font-size: 1.5rem;
+  color: var(--gray);
+  line-height: 2.5rem;
+  margin: 0;
+  text-transform: none;
+  text-align: justify;
+  text-indent: 3rem;
+  padding-left: 1rem;
+}
+
+.portfolio-popup .info {
+  flex: 0 0 35%;
+  max-width: 35%;
+  padding: 0 1.5rem;
+}
+
+.portfolio-popup .info ul li {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--gray);
+  /* opacity: 0.6; */
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.portfolio-popup .info ul li span {
+  font-weight: 400;
+}
+
+.portfolio-popup .info ul li:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-popup .separator {
+  height: 0.1rem;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  background: var(--timeline);
+}
+
+.portfolio-popup .pp-img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  box-shadow: var(--outer-shadow);
+}
+
+.portfolio-popup .pp-main {
+  min-height: 100vh;
+  /* background-color: #00708B; */
+  max-width: 1200px;
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-popup .pp-main-inner {
+  padding: 7rem 0 5rem;
+  position: relative;
+}
+
+.portfolio-popup .pp-project-details-btn {
+  position: absolute;
+  left: 0;
+  top: 1.5rem;
+  height: 4rem;
+  border-radius: 3rem;
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 4rem;
+  cursor: pointer;
+  box-shadow: var(--outer-shadow);
+  color: var(--tealbule);
+}
+
+.portfolio-popup .pp-project-details-btn i {
+  margin-left: 0.5rem;
+}
+
+.portfolio-popup .pp-project-details-btn:hover {
+  box-shadow: var(--inner-shadow);
+}
+
+.portfolio-popup .pp-close {
+  position: absolute;
+  right: 0;
+  top: 1.5rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  font-size: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--outer-shadow);
+  color: var(--pink);
+}
+
+.portfolio-popup .pp-close:hover {
+  box-shadow: var(--inner-shadow);
+}
+
+.portfolio-popup .pp-counter {
+  position: absolute;
+  right: 0;
+  height: 4rem;
+  line-height: 4rem;
+  bottom: 0.4rem;
+  font-size: 1.5rem;
+  color: var(--gray);
+}
+
+.portfolio-popup .pp-prev,
+.portfolio-popup .pp-next {
+  position: fixed;
+  top: 50%;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  box-shadow: var(--outer-shadow);
+  color: var(--gray);
+}
+
+.portfolio-popup .pp-prev:hover,
+.portfolio-popup .pp-next:hover {
+  opacity: 1;
+  box-shadow: var(--inner-shadow);
+  color: var(--tealbule);
+}
+
+.portfolio-popup .pp-prev i,
+.portfolio-popup .pp-next i {
+  line-height: 4rem;
+}
+
+.portfolio-popup .pp-prev {
+  left: 2rem;
+}
+
+.portfolio-popup .pp-next {
+  right: 2rem;
+}
+
+
+/* ---------- Article ---------- */
+.article .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.article .box-container .box {
+  padding: 2rem;
+  border-radius: 0.8rem;
+  position: relative;
+  box-shadow: var(--outer-shadow);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.article .box-container .box i {
+  font-size: 3rem;
+  padding-bottom: 4rem;
+  color: var(--white);
+  /* float: right; */
+}
+
+.article .box-container .box h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  color: var(--black);
+}
+
+.article .box-container .box p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--gray);
+}
+
+.article .box-container .box p span {
+  color: var(--tealbule);
+  font-weight: 700;
+}
+
+.article .box-container .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--tealbule);
+  clip-path: circle(7rem at 3% 3%);
+  /* clip-path: inset(0 0 75% 75% round 5% 0 5% 50%); */
+  z-index: -1;
+}
+
+/* .article .box-container .box:hover::before {
+  clip-path: circle(100%);
+}
+
+.article .box-container .box:hover>* {
+  color: #fff;
+} */
+
+
+
+/* ---------- Footer ---------- */
+.copyright-text {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: var(--border);
+  color: var(--gray);
+}
+
+.copyright-text span {
+  color: var(--tealbule);
+  font-weight: 700;
+}
+
+
+/* ---------- For device less then 991px ---------- */
+
+/*<768px use .col-xs-1~.col-xs-12
+  >=768px use .col-sm-1~.col-sm-12, 容器寬度750像素
+  >=992px use .col-md-1~.col-md-12, 容器寬度970像素
+  >=1200px use .col-lg-1~.col-lg-12, 容器寬度1170像素 */
+
+@media (max-width:991px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding-left: 0;
+  }
+
+  header {
+    left: -110%;
+  }
+
+  header.active {
+    left: 0%;
+    /* transition: 0.1s linear; */
+  }
+
+  #menu-btn {
+    display: initial;
+  }
+}
+
+/* ---------- For device less then 450px ---------- */
+@media (max-width:450px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    width: 100%;
+    border-right: 0;
+  }
+
+}

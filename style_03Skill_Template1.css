@@ -7,19 +7,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-html, body{
+html,
+body {
   margin: 0%;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color:#e9ecef;
+  background-color: #e9ecef;
   font-family: 'Roboto', sans-serif;
 }
 
-:root{
+:root {
   /* ---------- Colors ---------- */
   --text-dark: #3f4954;
-  --text-light : #686666da;
-  --darkblue: #12222d; /*#111*/
+  --text-light: #686666da;
+  --darkblue: #12222d;
+  /*#111*/
   --white: #ffffff;
   --BlackCoral: #515E6F;
   --darkred: #95070c;
@@ -36,37 +38,42 @@ html, body{
   font-family: 'Lexend', sans-serif;
   font-family: 'Livvic', sans-serif;
   */
-  
+
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--text-dark);
 }
-ul{
+
+ul {
   list-style-type: none;
 }
 
-h1{
-  font-family:'Lexend', sans-serif;
+h1 {
+  font-family: 'Lexend', sans-serif;
   font-size: 2.5rem;
 }
-h2{
-  font-family:'Russo One', sans-serif;  
+
+h2 {
+  font-family: 'Russo One', sans-serif;
   font-weight: 300;
   color: var(--darkblue);
 }
-p{
+
+p {
   font-family: 'Lexend', sans-serif;
   color: var(--text-light);
   text-align: justify;
   line-height: 1.5em;
   text-indent: 2em;
 }
-.container{
+
+.container {
   margin: 0 5vw;
 }
-hr{
+
+hr {
   height: .01em;
   background: currentColor;
   /*所有hr元素項文字一樣自動有相同顏色, 未來再用原生CSS控制顏色時, curentColor將會變得更實用*/
@@ -76,94 +83,104 @@ hr{
 /* ---------- Header ---------- */
 
 /* ---------- Navigation ---------- */
-nav{
-  background:var(--darkblue);
+nav {
+  background: var(--darkblue);
   padding: 0 2rem;
   height: 0rem;
   min-height: 11vh;
   overflow: hidden;
-  
+
 }
-nav .nav-menu{
+
+nav .nav-menu {
   display: flex;
-  flex-direction: row; /* 上2行語法可讓nav內的div不斷行而在同一行*/   
-  flex-wrap: wrap; /* 當螢幕變小時, div可換行*/ 
-  justify-content: space-between; /* 讓nav內的div分散對齊*/
+  flex-direction: row;
+  /* 上2行語法可讓nav內的div不斷行而在同一行*/
+  flex-wrap: wrap;
+  /* 當螢幕變小時, div可換行*/
+  justify-content: space-between;
+  /* 讓nav內的div分散對齊*/
 }
-nav ul{
+
+nav ul {
   display: flex;
   margin: 0;
 }
 
-nav ul li{
+nav ul li {
   padding: 1.6rem 1rem;
   font-size: 1.1rem;
   position: relative;
   font-family: 'Dosis', sans-serif;
-  font-size: 1.1rem;  
+  font-size: 1.1rem;
 }
 
-nav ul li a{
+nav ul li a {
   color: var(--gray);
 }
 
-nav ul li:hover{
+nav ul li:hover {
   background-color: var(--BlackCoral);
 }
 
-nav ul li:hover a{
+nav ul li:hover a {
   color: var(--white);
 }
 
-nav .nav-brand a{
+nav .nav-brand a {
   padding: 1rem 0;
-  display: block; /*換行*/
-  font-family:'Poppins', sans-serif;
+  display: block;
+  /*換行*/
+  font-family: 'Poppins', sans-serif;
 }
-nav .nav-brand .kary{
+
+nav .nav-brand .kary {
   position: relative;
   font-size: 2.5em;
-  color:var(--white);
+  color: var(--white);
   text-transform: uppercase;
   font-weight: 700;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
   transition: 0.5s;
 }
-nav .nav-brand .kary:hover{
+
+nav .nav-brand .kary:hover {
   transform: scale(1.1);
   filter: drop-shadow(1px 8px 30px #b1afaf);
 }
 
 
-main .content{
+main .content {
   display: grid;
   grid-template-columns: 70% 30%;
 }
 
-main .template-content{
-  width: 95%;    
+main .template-content {
+  width: 95%;
 }
 
-main .content .template-content > .template-image, .template-title{
+main .content .template-content>.template-image,
+.template-title {
   padding: 1rem 2rem;
   position: relative;
 }
 
-main .template-content .template-title a{
+main .template-content .template-title a {
   font-family: 'Anton', sans-serif;
   font-size: 1.5em;
 }
 
-main .template-content .template-title p span a{
+main .template-content .template-title p span a {
   font-size: 1em;
 }
-main .template-content .template-title p span a:hover{
+
+main .template-content .template-title p span a:hover {
   color: #D33A2C;
 }
 
 
 
-.content .template-content .template-title .template-btn{
+.content .template-content .template-title .template-btn {
   border: none;
   border-radius: 2rem;
   position: relative;
@@ -173,48 +190,53 @@ main .template-content .template-title p span a:hover{
   background: #e9ecef;
   color: var(--bg);
   text-decoration: none;
-  box-shadow:6px 6px 16px rgba(0,0,0,0.3);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3);
 }
-.content .template-content .template-title .template-btn:hover{
+
+.content .template-content .template-title .template-btn:hover {
   background-color: var(--BlackCoral);
   color: var(--white);
   cursor: pointer;
-}/* 滑鼠移上去時變色*/
+}
 
-.content .template-content .template-title .template-btn:active{
+/* 滑鼠移上去時變色*/
+
+.content .template-content .template-title .template-btn:active {
   background-color: var(--BlackCoral);
   box-shadow: 0 5px #888888;
   transform: translateY(4px);
 }
 
-.content .template-content .template-title .template-btn a{
+.content .template-content .template-title .template-btn a {
   margin: 0;
   font-family: 'Dosis', sans-serif;
   font-size: 1em;
   font-weight: 600;
 }
-.content .template-content .template-title .template-btn:hover a{
+
+.content .template-content .template-title .template-btn:hover a {
   color: var(--white);
 }
 
-main .content .template-content > .template-image{
-width: 360px;
+main .content .template-content>.template-image {
+  width: 360px;
 }
-main .content .template-content > .template-image .template-info{
+
+main .content .template-content>.template-image .template-info {
   position: absolute;
-  padding: 1rem;  
+  padding: 1rem;
   bottom: 0%;
   width: 325px;
   height: 2em;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(225,225,225,0.2);
-  box-shadow: 0 -10px 10px rgba(0,0,0,0.1);
+  border: 1px solid rgba(225, 225, 225, 0.2);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
 
-main .content .template-content > .template-image .template-info h3 {
-  font-family:'Abel', sans-serif;
+main .content .template-content>.template-image .template-info h3 {
+  font-family: 'Abel', sans-serif;
   font-weight: 500;
   font-size: 1.1em;
   text-align: center;
@@ -222,74 +244,74 @@ main .content .template-content > .template-image .template-info h3 {
   line-height: 1.1em;
 }
 
-main .content .template-content > .template-image .template-info h3 span{
+main .content .template-content>.template-image .template-info h3 span {
   font-size: 0.6em;
   font-weight: 300;
 }
 
-main .content .template-content > .template-image .img{
+main .content .template-content>.template-image .img {
   transition: all 1s ease;
 }
 
-main .content .template-content > .template-image .img:hover{
+main .content .template-content>.template-image .img:hover {
   transform: scale(1.1);
 }
 
-main .content .template-content > .template-image > div{
+main .content .template-content>.template-image>div {
   overflow: hidden;
 }
 
-.content .pagination{
+.content .pagination {
   display: flex;
   justify-content: center;
   color: var(--text-dark);
   margin: 4rem 0;
 }
 
-.content .pagination a{
+.content .pagination a {
   padding: .5rem 1rem;
   border-radius: 50%;
   margin: 0 .3rem;
   font-family: var(--Lexend);
 }
 
-.content .pagination .pages{
+.content .pagination .pages {
   background: var(--text-dark);
   color: var(--white);
 }
 
 
 /* ---------- Sidebar ---------- */
-.content > .sidebar ul{
-  font-family:'Livvic', cursive;   
+.content>.sidebar ul {
+  font-family: 'Livvic', cursive;
 }
 
-.content > .sidebar ul li{
-  background:var(--sky);
+.content>.sidebar ul li {
+  background: var(--sky);
   padding: .4rem 1rem;
-  margin: .8rem 0; 
-  border-top-right-radius:3em;
-  border-bottom-left-radius:3em;
-  border-top-left-radius:1em;
-  border-bottom-right-radius:1em;
+  margin: .8rem 0;
+  border-top-right-radius: 3em;
+  border-bottom-left-radius: 3em;
+  border-top-left-radius: 1em;
+  border-bottom-right-radius: 1em;
   width: 70%;
   display: flex;
   justify-content: space-between;
 }
 
-.content > .sidebar ul li a{
+.content>.sidebar ul li a {
   color: var(--darkblue);
 }
 
-.content .sidebar .popular-template .post-content{
+.content .sidebar .popular-template .post-content {
   padding: 1rem 0;
 }
 
-.content .sidebar .popular-template h2{
+.content .sidebar .popular-template h2 {
   padding-top: 8rem;
 }
 
-.content .sidebar .popular-template .popular-template-info{
+.content .sidebar .popular-template .popular-template-info {
   padding: .4rem .1rem;
   bottom: 0rem;
   left: 1.5rem;
@@ -297,59 +319,59 @@ main .content .template-content > .template-image > div{
   background: var(--white);
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(225,225,225,0.2);
-  box-shadow: 6px 6px 16px rgba(0,0,0,0.3);
+  border: 1px solid rgba(225, 225, 225, 0.2);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(5px);
 }
 
-main .content .sidebar .popular-template .popular-template-info h3{
-  font-family:'Abel', sans-serif;
+main .content .sidebar .popular-template .popular-template-info h3 {
+  font-family: 'Abel', sans-serif;
   font-weight: 600;
   font-size: 1.2em;
   text-align: center;
   margin: 0em;
   line-height: 1.1em;
-  box-shadow: -6px -6px 16px rgba(255,255,255,1);
+  box-shadow: -6px -6px 16px rgba(255, 255, 255, 1);
 }
 
-main .content .sidebar .popular-template .popular-template-info h3 span{
+main .content .sidebar .popular-template .popular-template-info h3 span {
   font-size: 0.7em;
   font-weight: 500;
 }
 
 /* ---------- Footer ---------- */
-footer{
+footer {
   position: relative;
   height: auto;
   padding: 40px;
   background: var(--darkblue);
 }
 
-footer .container{
+footer .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   float: row;
 }
 
-footer .container .sec{
+footer .container .sec {
   padding: 0 1em;
   /*border:1px dashed #fff; for check*/
 }
 
-footer .container .sec.about{
+footer .container .sec.about {
   width: 40%;
 }
 
-footer .container h2{
+footer .container h2 {
   position: relative;
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 0.5em;
 }
 
-footer .container h2:before{
-  content:'';
+footer .container h2:before {
+  content: '';
   position: absolute;
   bottom: -0.2em;
   left: 0;
@@ -358,16 +380,16 @@ footer .container h2:before{
   background: var(--darkred);
 }
 
-footer p{
+footer p {
   color: var(--gray);
 }
 
-.sci{
+.sci {
   margin-top: 1.5em;
   display: flex;
 }
 
-.sci li a{
+.sci li a {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -379,128 +401,158 @@ footer p{
   border-radius: 20%;
 }
 
-.sci li a:hover{
+.sci li a:hover {
   background-color: var(--darkred);
 }
 
-.sci li a .fa{
+.sci li a .fa {
   color: var(--white);
   font-size: 1.3em;
 }
 
-.quickLinks{
+.quickLinks {
   position: relative;
-  width:20%;
+  width: 20%;
 }
 
-.quickLinks ul li{
+.quickLinks ul li {
   display: inline-block;
   margin-right: 1em;
 }
 
-.quickLinks ul li a{
+.quickLinks ul li a {
   color: var(--gray);
   margin-bottom: 0.5em;
   display: inline-block;
 }
 
-.quickLinks ul li a:hover{
-  color:  var(--white);
+.quickLinks ul li a:hover {
+  color: var(--white);
   transform: scale(1.1);
   filter: drop-shadow(2px 8px 30px #b1afaf);
 }
 
-.contact{
+.contact {
   width: 25%;
 }
 
-.contact .info{
+.contact .info {
   position: relative;
 }
 
-.contact .info li{
+.contact .info li {
   display: flex;
   margin-bottom: 1em;
 }
 
-.contact .info li span:nth-child(1){
-  color:  var(--white);
+.contact .info li span:nth-child(1) {
+  color: var(--white);
   font-size: 1.3em;
   margin-right: 0.75em;
 }
 
-.contact .info li a{
+.contact .info li a {
   color: var(--gray);
 }
 
-.contact .info li a:hover{
-  color:  var(--white);
+.contact .info li a:hover {
+  color: var(--white);
 }
 
-.copyright{  
+.copyright {
   justify-content: center;
   background: #181818;
   padding: 0.5em 0 1em 0;
   text-align: center;
   color: var(--gray);
-  font-family:'Dosis', sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
-.copyright  span{
+.copyright span {
   color: var(--white);
   font-family: 'Russo One', sans-serif;
 }
 
-footer .pagetop{
+.pagetop {
   position: absolute;
   right: 5%;
   top: 50%;
 }
 
-footer .pagetop a{
+.pagetop a {
   color: var(--darkred);
 }
 
-footer .pagetop a:hover{
+.pagetop a:hover {
   color: var(--white);
   cursor: pointer;
 }
 
+/* ---------- Counter ---------- */
+.counter {
+  position: absolute;
+  right: 25%;
+  bottom: 20%;
+  text-align: center;
+  color: #F3F4F7;
+}
+
+.counter h2 {
+  font-weight: 600;
+  color: #F3F4F7;
+  margin-bottom: 0;
+}
+
+.counter p {
+  margin-top: 0;
+  display: inline;
+}
+
 /* ---------- For device less then 900px---------- */
-@media (max-width:900px){
-  main .content{
+@media (max-width:900px) {
+  main .content {
     display: flex;
   }
-  main .template-content{
-    width: 90%;
-  }  
-  main .content .template-content > .template-image{
+
+  main .template-content {
     width: 90%;
   }
+
+  main .content .template-content>.template-image {
+    width: 90%;
+  }
+
   .content .sidebar {
     display: none !important;
   }
-  footer{
+
+  footer {
     padding: 50px;
   }
-  footer .container{
+
+  footer .container {
     flex-direction: column;
   }
-  footer .container .sec.about, .quickLinks, .contact{
+
+  footer .container .sec.about,
+  .quickLinks,
+  .contact {
     width: 100%;
   }
 
 }
 
 /* ---------- For device less then 600px---------- */
-@media (max-width: 600px){
-  .content .template-content > .template-image .template-info{
+@media (max-width: 600px) {
+  .content .template-content>.template-image .template-info {
     display: none;
   }
-  main .template-content{
+
+  main .template-content {
     width: 80%;
-  }  
-  main .content .template-content > .template-image{
+  }
+
+  main .content .template-content>.template-image {
     width: 80%;
   }
 }
