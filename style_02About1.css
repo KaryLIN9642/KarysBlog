@@ -349,6 +349,23 @@ header nav a:hover {
   color: var(--tealbule);
 }
 
+.about .socialmedia a span {
+  position: absolute;
+  display: block;
+  white-space: nowrap;
+  transform: translate(-0.5rem, -0.5rem);
+  font-family: 'Poiret One', sans-serif;
+  font-size: 0.1rem;
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.about .socialmedia a:hover span {
+  transform: translate(1.5rem, -0.5rem);
+  visibility: visible;
+  opacity: 1;
+}
+
 /* ---------- Education ---------- */
 .timeline {
   flex: 0 0 100%;
