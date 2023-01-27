@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+  /* ---------- Colors ---------- */
+  --darkblue: #12222d;
+  --darkred: #95070c;
+  --pink: #fb839e;
+  --green: #4fce5d;
+  /* --green: #27ae60;
+  --green: #00a037; */
+  --lightblue: #2196f3;
+  --tealblue: #00708B;
+
+  --white: #fff;
+  --black: #404040;
+  --gray: #777;
+
+  --bg: #e6e6e6;
+
+
+  /* ---------- box-shadow ---------- */
+  --outer-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+  --inner-shadow: inset 0.4rem 0.4rem 1rem #ccc, inset -0.4rem -0.4rem 1rem #fff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* <---------- Dark Mode ---------- */
+body.active {
+  --darkblue: #00708B;
+  --black: #eff0f4;
+  --gray: #999;
+  --bg: #222;
+  --outer-shadow: 0.4rem 0.4rem 1rem #111, -0.4rem -0.4rem 1rem #333;
+  --inner-shadow: inset 0.4rem 0.4rem 1rem #111, inset -0.4rem -0.4rem 1rem #333;
+}
+
+/* ---------- Navigation ---------- */
+header .kary {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  font-size: 2.5em;
+  color: var(--darkblue);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+
+header .kary:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
+  color: var(--gray);
+}
+
+/* ---------- Main Content ---------- */
+.calculator {
+  position: relative;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: var(--outer-shadow);
+  padding: 40px 30px 30px;
+}
+
+.calculator .buttons {
+  position: relative;
+  display: grid;
+  /* gap: 15px; */
+}
+
+.calculator .value {
+  position: relative;
+  grid-column: span 4;
+  border: none;
+  outline: none;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 80px;
+  border-radius: 10px;
+  font-size: 2em;
+  text-align: right;
+  margin-bottom: 15px;
+  color: var(--tealblue);
+  box-shadow: var(--inner-shadow);
+  padding: 10px;
+  background: var(--bg);
+}
+
+.calculator .buttons span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin: 5px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--outer-shadow);
+}
+
+.calculator .buttons span:hover {
+  box-shadow: var(--inner-shadow);
+  color: var(--tealblue);
+}
+
+.calculator .buttons span:active {
+  box-shadow: var(--inner-shadow);
+}
+
+.calculator .buttons span.clear {
+  grid-column: span 2;
+  color: var(--pink);
+}
+
+.calculator .buttons .plus,
+.calculator .buttons .minus,
+.calculator .buttons .xmark,
+.calculator .buttons .divide {
+  color: var(--gray);
+}
+
+.calculator .buttons span.equal {
+  /* grid-column: span 2; */
+  color: var(--green);
+}
+
+
+/* ---------- Next ---------- */
+.pagination {
+  position: absolute;
+  bottom: 3px;
+  right: 40px;
+  padding: 0em 5em;
+  color: #3f4954;
+  margin: 0.5em 0;
+}
+
+.pagination a {
+  padding: 1em;
+  color: var(--darkblue);
+}
+
+.pagination a:hover {
+  color: var(--gray);
+  cursor: pointer;
+}
+
+
+/* ---------- Footer ---------- */
+
+
+
+/* ---------- For device less then 900px ---------- */
+
+/*<768px use .col-xs-1~.col-xs-12
+  >=768px use .col-sm-1~.col-sm-12, 容器寬度750像素
+  >=992px use .col-md-1~.col-md-12, 容器寬度970像素
+  >=1200px use .col-lg-1~.col-lg-12, 容器寬度1170像素 */

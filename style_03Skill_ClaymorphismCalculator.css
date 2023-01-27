@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+:root {
+  /* ---------- Colors ---------- */
+  --darkblue: #12222d;
+  --darkred: #95070c;
+  --pink: #fb839e;
+  --green: #4fce5d;
+  /* --green: #27ae60;
+  --green: #00a037; */
+  --lightblue: #2196f3;
+  --tealblue: #00708B;
+
+  --white: #333;
+  --black: #404040;
+  --gray: #777;
+
+  --bg: #f8f8f8;
+
+  --bg-calc: #fafafa;
+  --bs-calc: 25px 25px 75px rgba(0, 0, 0, 0.15),
+    10px 10px 70px rgba(0, 0, 0, 0.15),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.15),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.05);
+
+  --bg-num: linear-gradient(180deg, #fafafa, #f4f4f4);
+  --bs-num: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.15),
+    0 0 0 2px rgba(0, 0, 0, 1),
+    10px 20px 25px rgba(0, 0, 0, 0.25);
+
+  --bg-num-bfore: linear-gradient(90deg, #e6e6e6, #efefef);
+  --bs-num-bfore: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  --border-left: 1px solid #fff4;
+  --border-bottom: 1px solid #fff4;
+  --border-top: 1px solid #fff9;
+
+  --filter: brightness(0.9);
+
+  --clr: #fff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* <---------- Dark Mode ---------- */
+body.active {
+  --black: #eff0f4;
+  --gray: #999;
+  --bg: #333;
+  --white: #fff;
+
+  --bg-calc: #333;
+  --bs-calc: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.5);
+
+  --bg-num: linear-gradient(180deg, #2f2f2f, #3f3f3f);
+  --bs-num: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+
+  --bg-num-bfore: linear-gradient(90deg, #2d2d2d, #4d4d4d);
+  --bs-num-bfore: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  --border-left: 1px solid #0004;
+  --border-bottom: 1px solid #0004;
+  --border-top: 1px solid #0009;
+
+  --filter: brightness(1.5);
+
+  --clr: #fff;
+}
+
+#dark-toggler:before {
+  content: '\f011';
+  font-family: "FontAwesome";
+  color: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dark-toggler.active:before {
+  color: #4fce5d;
+}
+
+
+/* ---------- Navigation ---------- */
+header .kary {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  font-size: 2.5em;
+  color: var(--darkblue);
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+
+header .kary:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
+  color: var(--gray);
+}
+
+
+/* ---------- Main Content ---------- */
+.calculator {
+  position: relative;
+  width: 300px;
+  border-radius: 20px;
+  padding: 40px 30px 30px;
+
+  background: var(--bg-calc);
+  box-shadow: var(--bs-calc);
+}
+
+.calculator .buttons {
+  position: relative;
+  display: grid;
+  /* gap: 15px; */
+}
+
+.calculator .value {
+  position: relative;
+  grid-column: span 4;
+  border: none;
+  outline: none;
+  left: 5px;
+  width: calc(100% - 10px);
+  height: 80px;
+  border-radius: 10px;
+  font-size: 2em;
+  text-align: right;
+  margin-bottom: 15px;
+  padding: 10px;
+  color: var(--tealblue);
+  box-shadow: var(--inner-shadow);
+  background: #a7af7c;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.calculator .buttons span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  margin: 5px;
+  font-weight: 400;
+  cursor: pointer;
+  user-select: none;
+
+  background: var(--bg-num);
+  box-shadow: var(--bs-num);
+  color: var(--black);
+}
+
+.calculator .buttons span::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  border-radius: 10px;
+
+  background: var(--bg-num-bfore);
+  box-shadow: var(--bs-num-bfore);
+  border-left: var(--border-left);
+  border-bottom: var(--border-bottom);
+  border-top: var(--border-top);
+}
+
+.calculator .buttons span i {
+  position: relative;
+  font-style: normal;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: var(--white)
+}
+
+.calculator .buttons span:hover i {
+  color: var(--tealblue);
+}
+
+.calculator .buttons span:active {
+  filter: var(--filter);
+  transform: translateY(1px);
+  box-shadow: 0 2px #888888;
+}
+
+.calculator .buttons .clear i,
+.calculator .buttons .equal i {
+  color: var(--clr);
+}
+
+.calculator .buttons .clear {
+  grid-column: span 2;
+  width: 110px;
+  background: #f00;
+}
+
+.calculator .buttons .clear::before {
+  background: linear-gradient(90deg, #d20000, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+
+.calculator .buttons .equal {
+  background: #2196f3;
+}
+
+.calculator .buttons .equal::before {
+  background: linear-gradient(90deg, #1379c9, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+
+.calculator .buttons span.plus i,
+.calculator .buttons span.minus i,
+.calculator .buttons span.xmark i,
+.calculator .buttons span.divide i {
+  color: var(--gray);
+}
+
+.calculator .buttons span.plus:hover i,
+.calculator .buttons span.minus:hover i,
+.calculator .buttons span.xmark:hover i,
+.calculator .buttons span.divide:hover i {
+  color: var(--tealblue);
+}
+
+
+/* ---------- Next ---------- */
+.pagination {
+  position: absolute;
+  bottom: 3px;
+  right: 40px;
+  padding: 0em 5em;
+  color: #3f4954;
+  margin: 0.5em 0;
+}
+
+.pagination a {
+  padding: 1em;
+  color: var(--darkblue);
+}
+
+.pagination a:hover {
+  color: var(--gray);
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+
+
+
+/* ---------- For device less then 900px ---------- */
+
+/*<768px use .col-xs-1~.col-xs-12
+  >=768px use .col-sm-1~.col-sm-12, 容器寬度750像素
+  >=992px use .col-md-1~.col-md-12, 容器寬度970像素
+  >=1200px use .col-lg-1~.col-lg-12, 容器寬度1170像素 */

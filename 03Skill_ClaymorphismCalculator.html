@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 內建 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 內建 -->
+    <meta name="author" content="Kary LIN">
+    <meta name="generator" content="Visual Studio Code">
+    <meta name="keywords" content="Kary's Blog, Excel, Civil Engineering, Standardization, ISO">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome (new)-->
+    <script src="https://kit.fontawesome.com/eb0d7b416b.js" crossorigin="anonymous"></script>
+    <title>Neumorphism Calculator</title>
+
+    <!-- Custom style-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style_03Skill_ClaymorphismCalculator.css">
+
+    <!-- -------- JS -------- -->
+    <script type="text/javascript"></script>
+
+</head>
+
+<body>
+    <!-- -------- Nav -------- -->
+    <header>
+        <a href="Index.html" class="kary">Kary's.</a>
+    </header>
+
+
+    <!-- -------- Main Content -------- -->
+    <div class="calculator">
+        <form class="buttons" name="calc">
+            <input type="text" class="value" readonly name="txt">
+            <span id="dark-toggler" class="fa-regular fa-moon"></span>
+
+            <span class="num clear" onclick="calc.txt.value=''"><i>AC</i></span>
+            <span class="num plus" onclick="calc.txt.value+='+'"><i class="fa-solid fa-plus"></i></span>
+            <span class="num" onclick="calc.txt.value+='7'"><i>7</i></span>
+            <span class="num" onclick="calc.txt.value+='8'"><i>8</i></span>
+            <span class="num" onclick="calc.txt.value+='9'"><i>9</i></span>
+            <span class="num minus" onclick="calc.txt.value+='-'"><i class="fa-solid fa-minus"></i></span>
+            <span class="num" onclick="calc.txt.value+='4'"><i>4</i></span>
+            <span class="num" onclick="calc.txt.value+='5'"><i>5</i></span>
+            <span class="num" onclick="calc.txt.value+='6'"><i>6</i></span>
+            <span class="num xmark" onclick="calc.txt.value+='*'"><i class="fa-solid fa-xmark"></i></span>
+            <span class="num" onclick="calc.txt.value+='1'"><i>1</i></span>
+            <span class="num" onclick="calc.txt.value+='2'"><i>2</i></span>
+            <span class="num" onclick="calc.txt.value+='3'"><i>3</i></span>
+            <span class="num divide" onclick="calc.txt.value+='/'"><i class="fa-solid fa-divide"></i></span>
+            <span class="num" onclick="calc.txt.value+='0'"><i>0</i></span>
+            <span class="num" onclick="calc.txt.value+='00'"><i>00</i></span>
+            <span class="num" onclick="calc.txt.value+='.'"><i>.</i></span>
+
+            <span class="num equal" onclick="document.calc.txt.value=eval(calc.txt.value)"><i
+                    class="fa-solid fa-equals"></i></span>
+        </form>
+    </div>
+
+
+    <!-- -------- Next Skill -------- -->
+    <div class="pagination">
+        <a href="03Skill_NeumorphismCalculator.html"><i class="fa fa-chevron-circle-left fa-3x"
+                aria-hidden="true"></i></a>
+        <a href="03Skill_ACupofTea.html"><i class="fa fa-chevron-circle-right fa-3x" aria-hidden="true"></i></a>
+    </div>
+
+    <!-- -------- Footer -------- -->
+    <footer></footer>
+
+
+    <!-- -------- custom JS file -------- -->
+    <script>
+        /* ---------- Dark Mode ---------- */
+        let darkToggler = document.querySelector("#dark-toggler");
+
+        darkToggler.onclick = () => {
+            darkToggler.classList.toggle("fa-sun-o");
+            if (darkToggler.classList.contains("fa-sun-o")) {
+                document.body.classList.add("active");
+            } else {
+                document.body.classList.remove("active");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
