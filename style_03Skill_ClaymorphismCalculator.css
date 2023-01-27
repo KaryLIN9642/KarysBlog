@@ -16,7 +16,7 @@
   --green: #4fce5d;
   /* --green: #27ae60;
   --green: #00a037; */
-  --lightblue: #2196f3;
+  --lightblue: #27a0ff;
   --tealblue: #00708B;
 
   --white: #333;
@@ -34,11 +34,11 @@
   --bg-num: linear-gradient(180deg, #fafafa, #f4f4f4);
   --bs-num: inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.15),
-    0 0 0 2px rgba(0, 0, 0, 1),
-    10px 20px 25px rgba(0, 0, 0, 0.25);
+    0 0 0 0.1rem rgba(0, 0, 0, 0.5),
+    0.1rem 0.2rem 0.25rem rgba(0, 0, 0, 0.3);
 
   --bg-num-bfore: linear-gradient(90deg, #e6e6e6, #efefef);
-  --bs-num-bfore: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  --bs-num-bfore: -10px -10px 10px rgba(255, 255, 255, 0.6), 10px 5px 10px rgba(0, 0, 0, 0.15);
   --border-left: 1px solid #fff4;
   --border-bottom: 1px solid #fff4;
   --border-top: 1px solid #fff9;
@@ -66,6 +66,7 @@ body {
 
 /* <---------- Dark Mode ---------- */
 body.active {
+  --darkblue: #00708B;
   --black: #eff0f4;
   --gray: #999;
   --bg: #333;
@@ -80,8 +81,8 @@ body.active {
   --bg-num: linear-gradient(180deg, #2f2f2f, #3f3f3f);
   --bs-num: inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.25),
-    0 0 0 2px rgba(0, 0, 0, 0.75),
-    10px 20px 25px rgba(0, 0, 0, 0.4);
+    0 0 0 0.1rem rgba(0, 0, 0, 0.5),
+    0.1rem 0.2rem 0.25rem rgba(0, 0, 0, 0.5);
 
   --bg-num-bfore: linear-gradient(90deg, #2d2d2d, #4d4d4d);
   --bs-num-bfore: -5px -5px 15px rgba(0, 0, 0, 0.1), 10px 5px 10px rgba(0, 0, 0, 0.15);
@@ -94,17 +95,13 @@ body.active {
   --clr: #fff;
 }
 
-#dark-toggler:before {
-  content: '\f011';
-  font-family: "FontAwesome";
-  color: var(--gray);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#dark-toggler.active:before {
-  color: #4fce5d;
+#dark-toggler {
+  position: absolute;
+  top: 150px;
+  left: 47px;
+  color: var(--darkblue);
+  z-index: 100;
+  font-size: 1.5rem;
 }
 
 
@@ -162,8 +159,8 @@ header .kary:hover {
   padding: 10px;
   color: var(--tealblue);
   box-shadow: var(--inner-shadow);
-  background: #a7af7c;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.75);
+  background: #a9ad8f;
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.5);
 }
 
 .calculator .buttons span {
@@ -174,7 +171,7 @@ header .kary:hover {
   width: 50px;
   border-radius: 10px;
   margin: 5px;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
   user-select: none;
 
@@ -191,6 +188,11 @@ header .kary:hover {
   bottom: 14px;
   right: 12px;
   border-radius: 10px;
+  /* top: 0.25rem;
+  left: 0.35rem;
+  bottom: 0.9rem;
+  right: 0.7rem;
+  border-radius: 0.5rem; */
 
   background: var(--bg-num-bfore);
   box-shadow: var(--bs-num-bfore);
@@ -232,18 +234,18 @@ header .kary:hover {
   background: linear-gradient(90deg, #d20000, #ffffff5c);
   border-left: 1px solid #fff4;
   border-bottom: 1px solid #fff4;
-  border-top: 1px solid #fff4;
+  border-top: 1px solid #fff9;
 }
 
 .calculator .buttons .equal {
-  background: #2196f3;
+  background: var(--lightblue);
 }
 
 .calculator .buttons .equal::before {
-  background: linear-gradient(90deg, #1379c9, #ffffff5c);
+  background: linear-gradient(90deg, #00708B, #ffffff5c);
   border-left: 1px solid #fff4;
   border-bottom: 1px solid #fff4;
-  border-top: 1px solid #fff4;
+  border-top: 1px solid #fff9;
 }
 
 .calculator .buttons span.plus i,
