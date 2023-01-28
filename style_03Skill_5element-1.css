@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  background-color: #b1afaf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  /* border: 1px dashed red; */
+}
+
+
+
+/* ---------- Home ---------- */
+header .kary {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  font-size: 2.5em;
+  color: #12222d;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
+
+header .kary:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(1px 8px 30px #b1afaf);
+  color: #ffffff;
+}
+
+/* ---------- Main Content ---------- */
+
+.container {
+  position: relative;
+  top: 3em;
+  /* border: 0.1em dashed gray; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: relative;
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .circle:nth-child(1) {
+  position: absolute;
+  top: -3em;
+  left: 9em;
+  border: 0.15em solid #358442;
+  background: url(Icon/wood.png);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  padding: 1%;
+  opacity: 0.7;
+  color: #358442;
+}
+
+.container .circle:nth-child(2) {
+  position: absolute;
+  top: 6em;
+  left: 21em;
+  border: 0.15em solid #95070c;
+  background: url(Icon/flame.png);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  padding: 1%;
+  color: #95070c;
+}
+
+.container .circle:nth-child(3) {
+  position: absolute;
+  top: 18em;
+  left: 15em;
+  border: 0.15em solid #b8860b;
+  background: url(Icon/plant.png);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  padding: 1%;
+  opacity: 0.7;
+  color: #b8860b;
+}
+
+.container .circle:nth-child(4) {
+  position: absolute;
+  top: 18em;
+  left: 3em;
+  border: 0.15em solid #fff;
+  background: url(Icon/iron-bar.png);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  padding: 1%;
+  color: #fff;
+}
+
+.container .circle:nth-child(5) {
+  position: absolute;
+  top: 6em;
+  left: -3em;
+  border: 0.15em solid #222;
+  background: url(Icon/water-drop.png);
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  padding: 0.5%;
+  opacity: 0.8;
+}
+
+.text {
+  font-size: 5em;
+  font-family: 'Zhi Mang Xing', cursive;
+  font-weight: 600;
+}
+
+
+
+
+.generate {
+  position: relative;
+  width: 24em;
+  height: 24em;
+  border-radius: 50%;
+  animation: circle 8s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+.generate:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0,255,249,0.4));
+  background-size: 12em 21em;
+  background-repeat: no-repeat;
+  border-top-left-radius: 12em;
+  border-bottom-left-radius: 12em;
+}*/
+
+.generate:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  width: 0.5em;
+  height: 0.5em;
+  background: #00fff9;
+  border-radius: 50%;
+  z-index: -5;
+  box-shadow: 0 0 10px #00fff9,
+    0 0 20px #00fff9,
+    0 0 30px #00fff9,
+    0 0 40px #00fff9,
+    0 0 50px #00fff9,
+    0 0 60px #00fff9,
+    0 0 70px #00fff9,
+    0 0 80px #00fff9,
+    0 0 90px #00fff9,
+    0 0 100px #00fff9;
+}
+
+/* .generate span {
+  position: absolute;
+  top: 0.6em;
+  left: 0.6em;
+  right: 0.6em;
+  bottom: 0.6em;
+  border-radius: 50%;
+} */
+
+.body {
+  position: absolute;
+  width: 18em;
+  height: 18em;
+  background: url(Icon/body.png);
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 50px #03a9f4,
+    0 0 200px #03a9f4;
+  z-index: 5;
+}
+
+
+.line1 {
+  position: absolute;
+  left: 15em;
+  top: 2.5em;
+  height: 16em;
+  border: 2px dashed red;
+  border-left: 0.1em dashed transparent;
+  border-top: 0.1em dashed transparent;
+  border-bottom: 0.1em dashed transparent;
+  transform: rotate(-17deg);
+}
+
+.line1::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+  background: red;
+  box-shadow: 0 0 20px red;
+  animation: line1 1.5s linear infinite;
+}
+
+@keyframes line1 {
+  0% {
+    transform: translateY();
+  }
+
+  100% {
+    transform: translateY(250px);
+  }
+}
+
+.line2 {
+  position: absolute;
+  left: 9.1em;
+  top: 7em;
+  height: 15.5em;
+  border: 2px dashed red;
+  border-left: 0.1em dashed transparent;
+  border-top: 0.1em dashed transparent;
+  border-bottom: 0.1em dashed transparent;
+  transform: rotate(-55deg);
+}
+
+.line2::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+  background: red;
+  box-shadow: 0 0 20px red;
+  animation: line2 1.5s linear infinite;
+}
+
+@keyframes line2 {
+  100% {
+    transform: translateY();
+  }
+
+  0% {
+    transform: translateY(250px);
+  }
+}
+
+.line3 {
+  position: absolute;
+  left: 12em;
+  top: 0.5em;
+  height: 18em;
+  border: 2px dashed red;
+  border-left: 0.1em dashed transparent;
+  border-top: 0.1em dashed transparent;
+  border-bottom: 0.1em dashed transparent;
+  transform: rotate(90deg);
+}
+
+.line3::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+  background: red;
+  box-shadow: 0 0 20px red;
+  animation: line3 1.5s linear infinite;
+}
+
+@keyframes line3 {
+  100% {
+    transform: translateY();
+  }
+
+  0% {
+    transform: translateY(250px);
+  }
+}
+
+.line4 {
+  position: absolute;
+  left: 9em;
+  top: 2.5em;
+  height: 16em;
+  border: 2px dashed red;
+  border-left: 0.1em dashed transparent;
+  border-top: 0.1em dashed transparent;
+  border-bottom: 0.1em dashed transparent;
+  transform: rotate(17deg);
+}
+
+.line4::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+  background: red;
+  box-shadow: 0 0 20px red;
+  animation: line4 1.5s linear infinite;
+}
+
+@keyframes line4 {
+  100% {
+    transform: translateY(0);
+  }
+
+  0% {
+    transform: translateY(250px);
+  }
+}
+
+.line5 {
+  position: absolute;
+  left: 14.75em;
+  top: 7em;
+  height: 15.5em;
+  border: 2px dashed red;
+  border-left: 0.1em dashed transparent;
+  border-top: 0.1em dashed transparent;
+  border-bottom: 0.1em dashed transparent;
+  transform: rotate(55deg);
+}
+
+.line5::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 10px;
+  background: red;
+  box-shadow: 0 0 20px red;
+  animation: line5 1.5s linear infinite;
+}
+
+@keyframes line5 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(250px);
+  }
+}
+
+
+.nextskill {
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+}
+
+.nextskill a {
+  color: #12222d;
+}
+
+.nextskill a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ---------- Footer ---------- */
+
+
+
+/* ---------- For device less then 1250px---------- */
+@media (max-width:1250px) {
+  header {
+    padding: 10px;
+  }
+
+  header .kary {
+    font-size: 2em;
+    top: 10px;
+    left: 40px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 45%;
+  }
+
+  .cc {
+    display: none;
+  }
+
+  .nextskill {
+    bottom: 3%;
+    right: 3%;
+  }
+}
+
+/* ---------- For device less then 500px---------- */
+@media (max-width:500px) {
+  svg {
+    width: 300px;
+  }
+
+}
