@@ -139,6 +139,7 @@ header .kary:hover {
 .calculator .buttons span.clear {
   grid-column: span 2;
   color: var(--pink);
+  width: 110px;
 }
 
 .calculator .buttons .plus,
