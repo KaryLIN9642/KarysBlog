@@ -243,6 +243,12 @@ header nav a:hover {
   margin-bottom: 0;
 }
 
+/* ---------- Not-By-AI ---------- */
+.byhuman{
+  margin-top: 10rem;
+}
+
+
 /* ---------- for RWD menu ---------- */
 #menu-btn {
   position: fixed;
